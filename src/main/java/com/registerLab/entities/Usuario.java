@@ -1,5 +1,7 @@
 package com.registerLab.entities;
+
 import java.io.Serializable;
+
 public class Usuario implements Serializable{
 	private int id;
 	private String nombre;
@@ -7,7 +9,8 @@ public class Usuario implements Serializable{
 	private String correo;
 	private String rol;
 	private String contra;
-	public Usuario() {	
+	public Usuario() {
+		
 	}
 	public void setId(int id) {
 		this.id=id;
@@ -45,4 +48,6 @@ public class Usuario implements Serializable{
 	public String getCorreo() {
 		return correo;
 	}
+	
+
 }

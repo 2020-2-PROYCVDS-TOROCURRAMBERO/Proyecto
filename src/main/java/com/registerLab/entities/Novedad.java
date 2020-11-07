@@ -1,6 +1,8 @@
 package com.registerLab.entities;
+
 import java.io.Serializable;
 import java.sql.Date;
+
 public class Novedad implements Serializable{
 	private int id;
 	private Date fechaNovedad;
@@ -10,6 +12,9 @@ public class Novedad implements Serializable{
 	private int elemento;
 	private String usuario;
 	private int laboratorio;
+	
+		
+	
 	public Novedad() {
 		
 	}

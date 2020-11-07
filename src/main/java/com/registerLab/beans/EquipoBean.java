@@ -185,7 +185,7 @@ public class EquipoBean  extends BaseBeanRegisterLab {
 				}
 				else {
 					FacesContext context = FacesContext.getCurrentInstance();
-					context.addMessage(null, new FacesMessage("Succesfull","No fue posible añadir el elemento seleccionado") );
+					context.addMessage(null, new FacesMessage("Succesfull","No fue posible aÃ±adir el elemento seleccionado") );
 					return false;
 				}
 			} 

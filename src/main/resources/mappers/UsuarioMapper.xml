@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.registerLab.mappers.UsuarioMapper">
+	<select id="getUsuario" parameterType="map" resultMap="UsuarioResult">
+		SELECT * FROM usuario WHERE correo=#{Correo}
+	</select>
+	<insert id="registrarUsuario" parameterType="map">
+		insert into usuario values(#{carnet},#{nombre},#{apellido},#{correo},#{rol},#{contra})
+	</insert>
+	<resultMap type='Usuario' id='UsuarioResult'>
+	    <id property='id' column='carnet'/>
+	    <result property="nombre" column="nombre"></result>
+	    <result property="apellido" column="apellido"></result>
+	    <result property="correo" column="correo"></result>
+	    <result property="rol" column="rol"/>
+	    <result property="contra" column="contra"/>       
+	</resultMap>
+</mapper>

@@ -43,7 +43,7 @@ public class BajaEquipoBeanN extends BaseBeanRegisterLab{
 		return desasociar;
 	}
 	public void add(Elemento e) {
-		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Successfull","Se a añadido para dar de baja."));
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Successfull","Se a aÃ±adido para dar de baja."));
 		System.out.println("a");
 		Elemento t = null;
 		for(Elemento el:desasociar) {
@@ -54,7 +54,7 @@ public class BajaEquipoBeanN extends BaseBeanRegisterLab{
 		darBaja.add(e);
 	}
 	public void desasociarElemento(Elemento e) {
-		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Successfull","Se a añadido para desasociar"));
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Successfull","Se a aÃ±adido para desasociar"));
 		Elemento t = null;
 		for(Elemento el:darBaja) {
 			if(el.getId()==e.getId()) t = el;
@@ -92,7 +92,7 @@ public class BajaEquipoBeanN extends BaseBeanRegisterLab{
 					FacesContext.getCurrentInstance().getExternalContext().redirect("useradmin.xhtml");
 				} catch (IOException e1) {
 				}
-				FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Successfull","Se a añadido para desasociar"));
+				FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Successfull","Se a aÃ±adido para desasociar"));
 			} catch (ECILabException e2) {
 				
 			}			}else {

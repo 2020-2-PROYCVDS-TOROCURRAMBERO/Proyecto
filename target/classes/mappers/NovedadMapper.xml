@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.registerLab.mappers.NovedadMapper">
+	<select parameterType="map" id="getNovedadesElementoEquipo" resultMap="NovedadResult">
+		SELECT id as id_novedad, fechanovedad,descripcion,justificacion
+		FROM NOVEDAD
+		WHERE novedad.equipo=#{equipo} AND novedad.elemento=#{elemento}
+	</select>
+	<select id="getNovedades" resultMap="NovedadResult" parameterType="map">
+		SELECT id as id_novedad, fechanovedad,descripcion,justificacion
+		FROM NOVEDAD
+	</select>
+ 
+ <select id="getNovedad" parameterType="map"  resultMap="NovedadResult">
+ 	select * from novedad 
+ 	where id=#{idNov}
+ </select>
+ 
+ <select id="getNovedadesLabEqui" parameterType="map"  resultMap="NovedadResult">
+ 	select novedad.id,novedad.descripcion,novedad.justificacion,novedad.fechanovedad
+ 	,novedad.equipo from novedad inner join equipo on novedad.equipo = equipo.id
+ 	 left join laboratorio on equipo.laboratorio = laboratorio.id  
+ 	 where laboratorio.id = #{lab}
+ </select>
+ 
+ <select id="getUltimaNovedad" parameterType="map"  resultMap="NovedadResult" >
+ 	select max(id) from novedad
+ </select>
+ 
+ <insert id="agregarNovedad" parameterType="map">
+ 	insert into novedad (id,fechanovedad,descripcion,justificacion,equipo,elemento,usuario)
+ 	select count(*)+1,now(),#{desc},#{just},#{idEquipo},#{idElem},#{usuario} from novedad
+ </insert>
+ 	<insert id="registrarNovedadSinEquipo" parameterType="map">
+ 		insert into novedad(id,descripcion,justificacion,ELEMENTO,usuario,fechanovedad) select count(*)+1,#{descripcion},#{justificacion},#{elemento},#{usuario},now() from novedad
+ 
+ 	</insert>
+ 	<select id="novedadesEquipo" parameterType="map" resultMap="NovedadResult">
+ 		SELECT id as id_novedad, fechanovedad,descripcion,justificacion
+		FROM NOVEDAD
+		WHERE equipo=#{Equipo}
+ 	</select>
+ 	<select id="getNovedadesElemento" parameterType="map" resultMap="NovedadResult">
+ 		SELECT id as id_novedad, fechanovedad,descripcion,justificacion,equipo,usuario
+		FROM NOVEDAD
+		WHERE elemento=#{elemento}
+ 	</select>
+ 	<insert id="agregarNovedadSinElemento" parameterType="map">
+ 		insert into novedad(id,fechanovedad,descripcion,justificacion,equipo,usuario) select count(*)+1,now(),#{razon},#{justificacion},#{equipo},#{usuario} from novedad 
+ 	</insert>
+	<resultMap type='Novedad' id='NovedadResult'>
+	    <id property='id' column='id_novedad'/>
+	    <result property="fechaNovedad" column="fechanovedad"></result>
+	    <result property="descripcion" column="descripcion"></result>
+	    <result property="justificacion" column="justificacion"></result>
+		<result property="equipo" column="equipo"></result>
+		<result property="usuario" column="usuario"></result>
+		<result property="elemento" column="elemento"></result>
+		<result property="laboratorio" column="laboratorio"></result>
+	</resultMap>
+</mapper>

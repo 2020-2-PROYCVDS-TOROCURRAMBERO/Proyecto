@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Registrar Laboratorio</title>
+	<style type="text/css">
+		.my_test li {
+			display: inline;
+			padding: 10px;
+			margin: 10px;
+		}
+
+		.pers {
+			color: white;
+			background: #1B8344;
+			padding: 5px;
+			margin: 5px;
+			width: 100%;
+		}
+
+		.pers ul li {
+			padding: 5px;
+			margin: 5px;
+		}
+
+		.temp {
+			font-size: 20px;
+		}
+
+		.ui-datatable-data tr td {
+			background: white;
+		}
+
+		.ui-paginator {
+			background: white;
+		}
+
+		.ui-datatable-tablewrapper table thead tr th {
+			background: #1B8344;
+			color: white;
+		}
+
+		.pers {
+			width: 100%;
+			background: #1B8344;
+		}
+	</style>
+</h:head>
+
+<h:body style="margin:0px; padding:0px;">
+	<img src="labinfo.jpg" style="width:250px;"></img>
+	<br></br>
+
+	<h:form>
+		<div style="margin:0px; padding:5px; background:#1B8344; width:100%">
+			<div style="text-align:right;">
+				<ul class="my_test">
+					<li>
+						<h:commandLink value="Regresar" actionListener="#{sesBean.regrese()}" style="color:white;">
+						</h:commandLink>
+					</li>
+					<li style="color:white;">#{sesBean.getUsuario().getNombre()} #{sesBean.getUsuario().getApellido()}
+					</li>
+					<li>
+						<h:commandLink value="Log out" actionListener="#{sesBean.logout()}"
+							style="color:white; padding:10px; background:gray;"></h:commandLink>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</h:form>
+	<!-- Actauliza los datos -->
+	#{ENovBean.setElemento(ElmBeanReq.getElemento())}
+	#{ENovBean.setEquipo(ElmBeanReq.getEquipo())}
+	<h:form id="m_from">
+		<center>
+			<p:outputLabel value="Elemento" style="font-size:30px;" />
+		</center>
+		<p:outputLabel value="Id elemento: #{ENovBean.getElemento()}" />
+		<br></br>
+		<p:outputLabel value="Id equipo: #{ENovBean.getEquipo()}" />
+		<br></br>
+		<p:outputLabel value="Fabricante: #{ENovBean.get().getFabricante()}" />
+		<br></br>
+		<p:outputLabel value="Referencia: #{ENovBean.get().getReferencia()}" />
+		<br></br>
+		<p:outputLabel value="Fecha Inicio Actividad: #{ENovBean.get().getFechaInicioActividad()}" />
+		<br></br>
+		<p:dataTable id="novedades" value="#{ENovBean.getNovedadElementoEquipo()}" var="novedad" paginator="true"
+			rows="10"
+			paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}          {Exporters}">
+			<f:facet name="{Exporters}">
+				<h:commandLink>
+					<img src="excel.png" style="width:20px; height:20px;"></img>
+					<p:dataExporter type="xls" target="novedades"
+						fileName="novedades elemento #{ENovBean.getElemento()} en el equipo #{ENovBean.getEquipo()}" />
+				</h:commandLink>
+			</f:facet>
+			<p:column headerText="Id">
+				<p:outputLabel value="${novedad.getId()}" />
+			</p:column>
+			<p:column headerText="Descripcion">
+				<p:outputLabel value="${novedad.getDescripcion()}" />
+			</p:column>
+			<p:column headerText="Justificacion">
+				<p:outputLabel value="${novedad.getJustificacion()}" />
+			</p:column>
+			<p:column headerText="Fecha Novedad" sortBy="${novedad.getFechaNovedad()}">
+				<p:outputLabel value="${novedad.getFechaNovedad()}" />
+			</p:column>
+		</p:dataTable>
+	</h:form>
+	<br></br>
+	<div class="pers">
+		Algunos enlaces de interes:<br></br>
+		<ul>
+			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingenieria Julio
+					Garavito.</a></li>
+			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de informatica</a>
+			</li>
+		</ul>
+	</div>
+</h:body>
+
+</html>

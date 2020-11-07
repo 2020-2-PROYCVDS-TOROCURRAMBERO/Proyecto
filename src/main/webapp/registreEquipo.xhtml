@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Registrar Equipos</title>
+	<style type="text/css">
+		.my_test li {
+			display: inline;
+			padding: 10px;
+			margin: 10px;
+		}
+
+		.pers {
+			color: white;
+			background: #1B8344;
+			padding: 5px;
+			margin: 5px;
+			width: 100%;
+		}
+
+		.pers ul li {
+			padding: 5px;
+			margin: 5px;
+		}
+
+		.temp {
+			font-size: 20px;
+		}
+
+		.ui-datatable thead th {
+			background: #1B8344;
+			color: white;
+		}
+
+		.ui-datatable tbody tr {
+			background: white;
+		}
+
+		.ui-paginator {
+			background: white;
+		}
+
+		.ui-paginator-pages {}
+
+		.ui-button {
+			color: white;
+			background: #1E90FF;
+		}
+
+		.pers {
+			width: 100%;
+			background: #4169E1;
+		}
+	</style>
+</h:head>
+<h:body style="margin:0px; padding:0px;">
+	#{equiBean.setId(0)}
+	#{equiBean.setFechaInicioActividad(null)}
+	#{equiBean.setFechaAdquisicion(null)}
+	#{equiBean.startElementos()}
+	<br></br>
+	<h:form>
+		<div style="margin:0px; padding:5px; background:#4169E1; width:100%">
+			<div style="text-align:right;">
+				<ul class="my_test">
+					<li>
+						<h:commandLink value="Regresar" actionListener="#{sesBean.regrese()}" style="color:white;">
+						</h:commandLink>
+					</li>
+					<li style="color:white;">#{sesBean.getUsuario().getNombre()} #{sesBean.getUsuario().getApellido()}
+					</li>
+					<li>
+						<h:commandLink value="Log out" actionListener="#{sesBean.logout()}"
+							style="color:white; padding:10px; background:gray;"></h:commandLink>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</h:form>
+	<h:form id="m_form">
+		<p:growl id="growl" showDetail="true" sticky="true" />
+		<h:panelGrid columns="2" cellpadding="8">
+			<p:outputLabel value="En este formulario realizara el registro de un equipo con su respectiva informacion:">
+			</p:outputLabel>
+			<br></br>
+			<br></br>
+			<p:outputLabel value="Numero de Equipo:"></p:outputLabel>
+			<p:inputText styleClass="p-col-fixed" style="width:100px" value="#{equiBean.id}">
+				<p:ajax event="keyup" update="disp"></p:ajax>
+			</p:inputText>
+			<b>Disponible:</b>
+			<p:outputLabel value="#{equiBean.getEquipo() eq null}" style="color:blue;" id="disp"> </p:outputLabel>
+			<p:outputLabel value="Fecha de inicio de actividad:"></p:outputLabel>
+			<p:calendar value="#{equiBean.fechaInicioActividad}"></p:calendar>
+			<p:outputLabel value="Fecha de Adquisicion:"></p:outputLabel>
+			<p:calendar value="#{equiBean.fechaAdquisicion}"></p:calendar>
+			<br></br>
+			<p:commandButton id="imageBtn" value="Registrar un nuevo elemento" type="button" />
+			<p:overlayPanel id="imagePanel" for="imageBtn" hideEffect="fade">
+				<h1>Registrar elemento</h1>
+				<br></br>
+				<h:outputLabel value="Numero de elemento:"></h:outputLabel>
+				<br></br>
+				<p:inputText value="#{elmBean.id}">
+					<p:ajax event="keyup" update="elmdis"></p:ajax>
+				</p:inputText>
+				<br></br>
+				Disponible: <h:outputLabel value="#{elmBean.getElemento() eq null}" id="elmdis">
+				</h:outputLabel>
+				<br></br>
+				<h:outputLabel value="Fabricante:"></h:outputLabel>
+				<br></br>
+				<p:inputText value="#{elmBean.fabricante}"></p:inputText>
+				<br></br>
+				<h:outputLabel value="Referencia:"></h:outputLabel>
+				<br></br>
+				<p:inputText value="#{elmBean.referencia}"></p:inputText>
+				<br></br>
+				<h:outputLabel value="fecha adquisicion:"></h:outputLabel>
+				<br></br>
+				<p:calendar value="#{elmBean.fechaAdquisicion}"></p:calendar>
+				<br></br>
+				<h:outputLabel value="Categoria:"></h:outputLabel>
+				<br></br>
+				<p:selectOneMenu id="categoria" value="#{elmBean.categoria}" style="width:150px">
+					<f:selectItem itemLabel="TORRE" itemValue="TORRE" noSelectionOption="true" />
+					<f:selectItem itemLabel="PANTALLA" itemValue="PANTALLA" noSelectionOption="true" />
+					<f:selectItem itemLabel="MOUSE" itemValue="MOUSE" noSelectionOption="true" />
+					<f:selectItem itemLabel="TECLADO" itemValue="TECLADO" noSelectionOption="true" />
+				</p:selectOneMenu>
+				<br></br>
+				<br></br>
+				<p:commandLink value="Registrar elemento" actionListener="#{elmBean.registrarElemento()}" update="@form"
+					style="background:#4169E1; color:white; padding:10px;"></p:commandLink>
+			</p:overlayPanel>
+			<br></br>
+			<center>
+			</center>
+		</h:panelGrid>
+		<div style="text-align:left;">
+			<br></br>
+			Ahora vincula elementos a tu equipo.
+			<h1>Elementos Vinculados</h1>
+			<br></br>Nota:Para registrar el equipo es necesario que el equipo cuente con un elemento de cada categoria
+			<br></br>
+			<p:dataTable value="#{equiBean.getElementos()}" var="el" class="perso">
+				<p:column headerText="Id">${el.getId()}</p:column>
+				<p:column headerText="Fabricante">${el.getFabricante()}</p:column>
+				<p:column headerText="Referencia">${el.getReferencia()}</p:column>
+				<p:column headerText="Categoria">${el.getCategoria()}</p:column>
+			</p:dataTable>
+			<br></br>
+			<p:selectOneMenu id="categoria_equ" value="#{equiBean.categoria}" style="width:150px">
+				<f:selectItem itemLabel="TORRE" itemValue="TORRE" noSelectionOption="true" />
+				<f:selectItem itemLabel="PANTALLA" itemValue="PANTALLA" noSelectionOption="true" />
+				<f:selectItem itemLabel="MOUSE" itemValue="MOUSE" noSelectionOption="true" />
+				<f:selectItem itemLabel="TECLADO" itemValue="TECLADO" noSelectionOption="true" />
+			</p:selectOneMenu>
+			<p:commandButton value="Buscar elementos de esta categoria" update="@form"
+				style="color:white; background:blue; padding:8px;"></p:commandButton>
+			<br></br>
+			<b>Categoria: #{equiBean.getCategoria()}</b>
+			<br></br>
+			<br></br>
+			<p:dataTable value="#{equiBean.getElementos(equiBean.getCategoria())}" var="elemento" paginator="true"
+				rows="10">
+				<p:column headerText="Id">${elemento.getId()}</p:column>
+				<p:column headerText="Fabricante">${elemento.getFabricante()}</p:column>
+				<p:column headerText="Referencia">${elemento.getReferencia()}</p:column>
+				<p:column headerText="Asociar">
+					<p:commandLink value="Asociar" actionListener="#{equiBean.add(elemento)}" update="@form">
+					</p:commandLink>
+				</p:column>
+			</p:dataTable>
+		</div>
+		<br></br>
+		<br></br>
+		<center>
+			<p:commandLink value="Registrar equipo" actionListener="#{equiBean.registrarEquipo()}" update="@form"
+				style="background:blue; color:white; padding:10px;"></p:commandLink>
+		</center>
+	</h:form>
+	<br></br>
+
+</h:body>
+
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.registerLab.mappers.ElementoMapper">
+	<select id="elementoAsociadoaEquipo" parameterType="map" resultType="java.lang.Boolean">
+		SELECT COUNT(*)
+		FROM elemento
+		WHERE id=#{elemento} and equipo is not null
+	</select>
+	<select id="getElementoPorCategoria" parameterType="map" resultMap="ElementoResult">
+		select id as id_elemento,
+		categoria,
+		fabricante,
+		referecia as referencia,
+		fechaadquisicion as fechaadquisicion_elemento,
+		fechainicioactividad as fechainicioactividad_elemento,
+		fechafinactividad as fechafinactividad_elemento
+	 	from elemento where categoria=#{categoria} and fechafinactividad is null and equipo is null
+	</select>
+	<select id="getElementosActivos" resultMap="ElementoResult">
+		select id as id_elemento,
+		categoria,
+		fabricante,
+		referecia as referencia,
+		fechaadquisicion as fechaadquisicion_elemento,
+		fechainicioactividad as fechainicioactividad_elemento,
+		fechafinactividad as fechafinactividad_elemento
+	 	from elemento where fechafinactividad is null and equipo is null
+	</select>
+	
+	
+
+	<select id="getElemento" parameterType="map" resultMap="ElementoResult">
+		select id as id_elemento,
+		categoria,
+		fabricante,
+		referecia as referencia,
+		fechaadquisicion as fechaadquisicion_elemento,
+		fechainicioactividad as fechainicioactividad_elemento,
+		fechafinactividad as fechafinactividad_elemento
+	 	from elemento where id=#{ElemId} 
+	</select>
+	
+	
+	<insert parameterType="map" id="AgregarElemento">
+		insert into elemento (id,categoria,fabricante,referecia,fechaadquisicion,fechainicioactividad,fechafinactividad)
+		values (#{id},#{cat},#{fab},#{ref},#{fecAq},#{fecIn},#{fecFin})
+	</insert>
+	
+	
+	<select id="consultarElementos" resultMap="ElementoResult">
+		select id as id_elemento,
+		categoria,
+		fabricante,
+		referecia as referencia,
+		fechaadquisicion as fechaadquisicion_elemento,
+		fechainicioactividad as fechainicioactividad_elemento,
+		fechafinactividad as fechafinactividad_elemento
+		from elemento  
+	</select>
+	
+	<update id="desvincularElementos" parameterType="map">
+		update elemento set equipo=NULL where equipo=#{equipo} and categoria=#{categoria}
+	</update>
+	
+	<update id="darBaja" parameterType="map">
+		update elemento set fechafinactividad=now() where id=#{elemento}
+	
+	</update>
+	
+	<resultMap type='Elemento' id='ElementoResult'>
+	    <id property='id' column='id_elemento'/>
+	    <result property="categoria" column="categoria"></result>
+	    <result property="fabricante" column="fabricante"></result>
+	    <result property="referencia" column="referencia"></result>
+	    <result property="fechaAdquisicion" column="fechaadquisicion_elemento"/>
+	    <result property="fechaInicioActividad" column="fechainicioactividad_elemento"/>
+	    <result property="fechaFinActividad" column="fechafinactividad_elemento"/>
+	</resultMap>
+	
+</mapper>

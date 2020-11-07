@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource="test.properties">
+    </properties>
+
+     <typeAliases>
+        <typeAlias type="com.registerLab.entities.Usuario" alias="Usuario"/>
+        <typeAlias type="com.registerLab.entities.Novedad" alias="Novedad"/>
+        <typeAlias type="com.registerLab.entities.Elemento" alias="Elemento"/>
+        <typeAlias type="com.registerLab.entities.Laboratorio" alias="Laboratorio"/>
+        <typeAlias type="com.registerLab.entities.Equipo" alias="Equipo"/>
+    </typeAliases>	
+
+    <environments default="test">
+        <environment id="test">
+            <transactionManager type="JDBC" />
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}" />
+                <!--property name="url" value="jdbc:mysql://localhost:3306/video_rental"/!-->
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}" />
+                <property name="password" value="${password}" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="mappers/UsuarioMapper.xml"></mapper>      
+    	<mapper resource="mappers/ElementoMapper.xml"></mapper>
+    	<mapper resource="mappers/LaboratorioMapper.xml"></mapper>
+    	<mapper resource="mappers/NovedadMapper.xml"></mapper>
+    	<mapper resource="mappers/EquipoMapper.xml"></mapper>
+    </mappers>
+        
+</configuration>

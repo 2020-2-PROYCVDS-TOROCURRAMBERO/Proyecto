@@ -52,9 +52,7 @@ public class SessionBean extends BaseBeanRegisterLab{
 	public void login() {
 		try {
 			Subject currentUser = SecurityUtils.getSubject();
-			String hex = new Sha256Hash(password).toHex();
-			System.out.println(hex);
-			UsernamePasswordToken token = new UsernamePasswordToken(email, hex);
+			UsernamePasswordToken token = new UsernamePasswordToken(email, password);
 			token.setRememberMe(true);
 			currentUser.login(token);
 			FacesContext.getCurrentInstance().getExternalContext().redirect("useradmin.xhtml");
@@ -62,7 +60,7 @@ public class SessionBean extends BaseBeanRegisterLab{
 		}
 			catch(Exception e) {
 		        FacesContext context = FacesContext.getCurrentInstance();
-		        context.addMessage(null, new FacesMessage("Error","Revise sus credenciales, no fue posible iniciar sesión") );
+		        context.addMessage(null, new FacesMessage("Error","Revise sus credenciales, no fue posible iniciar sesiÃ³n") );
 
 			}
 		}

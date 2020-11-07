@@ -156,7 +156,7 @@ public class LaboratorioBean extends BaseBeanRegisterLab  {
 				}
 				else {
 					FacesContext context = FacesContext.getCurrentInstance();
-					context.addMessage(null, new FacesMessage("Succesfull","No fue posible añadir el equipo seleccionado") );
+					context.addMessage(null, new FacesMessage("Succesfull","No fue posible aÃ±adir el equipo seleccionado") );
 					return false;
 				}
 			} 

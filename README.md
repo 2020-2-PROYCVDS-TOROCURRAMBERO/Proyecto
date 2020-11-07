@@ -1,4 +1,11 @@
 # Proyecto
+
+# app desplegada en heroku
+
+Laboratiorio de informatica ECI
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://cvdsproyecto.herokuapp.com/)
+
 ## Credenciales para las bases de datos:
 * Host:           
 ec2-52-44-235-121.compute-1.amazonaws.com

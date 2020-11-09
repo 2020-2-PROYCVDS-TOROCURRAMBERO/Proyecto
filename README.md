@@ -1,6 +1,6 @@
 # Proyecto
 
-# app desplegada en heroku
+## Aplicación desplegada en Heroku:
 
 Laboratiorio de informatica ECI
 

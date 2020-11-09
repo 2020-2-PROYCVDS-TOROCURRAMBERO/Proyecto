@@ -2,8 +2,6 @@
 
 ## Aplicación desplegada en Heroku:
 
-Laboratiorio de informatica ECI
-
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://cvdsproyecto.herokuapp.com/)
 
 ## Credenciales para las bases de datos:

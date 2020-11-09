@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3c.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:p="http://primefaces.org/ui">
 <h:head>
+	<body style = "background: url(https://i.pinimg.com/originals/2c/6a/fb/2c6afb5684c13cb738032d101e3c776e.jpg) no-repeat ; background-size: 102% 100%;">
+	</body>
 	<title>Historial de Elementos</title>
 	<style type="text/css">
 		.my_test li {
@@ -47,7 +49,7 @@
 </h:head>
 
 <h:body style="margin:0px; padding:0px;">
-	<img src="labinfo.jpg" style="width:250px;"></img>
+	
 	<br></br>
 
 	<h:form>
@@ -65,7 +67,8 @@
 			</div>
 		</div>
 	</h:form>
-	<h1>Elementos</h1>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Elementos Registrados">
+	</p:outputLabel>
 	<h:form>
 		<p:dataTable value="#{sesBean.getHistorialElementos()}" var="elem" paginator="true" rows="10">
 			<p:column headerText="Codigo">
@@ -84,11 +87,11 @@
 	</h:form>
 	<br></br>
 	<div class="pers">
-		Algunos enlaces de interes:<br></br>
+		Algunos enlaces de interés:<br></br>
 		<ul>
 			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingenieria Julio
-					Garavito.</a></li>
-			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de informatica</a>
+					Garavito</a></li>
+			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de Informática</a>
 			</li>
 		</ul>
 	</div>

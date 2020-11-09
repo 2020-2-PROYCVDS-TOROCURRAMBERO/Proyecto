@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3c.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
 <h:head>
+	<body style = "background: url(https://i.pinimg.com/originals/1c/9e/b2/1c9eb2e19f7e77fbd1a99495b0b744b4.jpg) no-repeat ; background-size: 102% 100%;">
+	</body>
 	<title>Registrar Equipos</title>
 	<style type="text/css">
 		.my_test li {
@@ -80,22 +82,23 @@
 	<h:form id="m_form">
 		<p:growl id="growl" showDetail="true" sticky="true" />
 		<h:panelGrid columns="2" cellpadding="8">
-			<p:outputLabel value="En este formulario realizara el registro de un equipo con su respectiva informacion:">
+			<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Registrar Equipo">
 			</p:outputLabel>
 			<br></br>
 			<br></br>
-			<p:outputLabel value="Numero de Equipo:"></p:outputLabel>
-			<p:inputText styleClass="p-col-fixed" style="width:100px" value="#{equiBean.id}">
+			<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Número del Equipo:"></p:outputLabel>
+			<p:inputText styleClass="p-col-fixed" style="width:50px" value="#{equiBean.id}">
 				<p:ajax event="keyup" update="disp"></p:ajax>
 			</p:inputText>
-			<b>Disponible:</b>
-			<p:outputLabel value="#{equiBean.getEquipo() eq null}" style="color:blue;" id="disp"> </p:outputLabel>
-			<p:outputLabel value="Fecha de inicio de actividad:"></p:outputLabel>
+			<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Disponible:"></p:outputLabel>
+			<p:outputLabel value="#{equiBean.getEquipo() eq null}" style="color:red;" id="disp"> </p:outputLabel>
+			<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Fecha de Inicio de Actividad:"></p:outputLabel>
 			<p:calendar value="#{equiBean.fechaInicioActividad}"></p:calendar>
-			<p:outputLabel value="Fecha de Adquisicion:"></p:outputLabel>
+			<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Fecha de Adquisición:"></p:outputLabel>
 			<p:calendar value="#{equiBean.fechaAdquisicion}"></p:calendar>
 			<br></br>
-			<p:commandButton id="imageBtn" value="Registrar un nuevo elemento" type="button" />
+			<br></br>
+			<p:commandButton id="imageBtn" value="Registrar nuevo Equipo" type="button" />
 			<p:overlayPanel id="imagePanel" for="imageBtn" hideEffect="fade">
 				<h1>Registrar elemento</h1>
 				<br></br>
@@ -138,10 +141,10 @@
 			</center>
 		</h:panelGrid>
 		<div style="text-align:left;">
+			<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Elementos Vinculados">
+			</p:outputLabel>
+			<br></br>Nota: Para registrar el equipo es necesario que el equipo cuente con un elemento de cada categoria
 			<br></br>
-			Ahora vincula elementos a tu equipo.
-			<h1>Elementos Vinculados</h1>
-			<br></br>Nota:Para registrar el equipo es necesario que el equipo cuente con un elemento de cada categoria
 			<br></br>
 			<p:dataTable value="#{equiBean.getElementos()}" var="el" class="perso">
 				<p:column headerText="Id">${el.getId()}</p:column>
@@ -156,10 +159,12 @@
 				<f:selectItem itemLabel="MOUSE" itemValue="MOUSE" noSelectionOption="true" />
 				<f:selectItem itemLabel="TECLADO" itemValue="TECLADO" noSelectionOption="true" />
 			</p:selectOneMenu>
-			<p:commandButton value="Buscar elementos de esta categoria" update="@form"
-				style="color:white; background:blue; padding:8px;"></p:commandButton>
 			<br></br>
-			<b>Categoria: #{equiBean.getCategoria()}</b>
+			<p:commandButton value="Buscar elementos de esta categoría" update="@form"
+				style="color:black; padding:8px;"></p:commandButton>
+			<br></br>
+			<br></br>
+			<b style="color:black ; font:Arial ; font-size:380%">Categoría: #{equiBean.getCategoria()}</b>
 			<br></br>
 			<br></br>
 			<p:dataTable value="#{equiBean.getElementos(equiBean.getCategoria())}" var="elemento" paginator="true"
@@ -176,8 +181,8 @@
 		<br></br>
 		<br></br>
 		<center>
-			<p:commandLink value="Registrar equipo" actionListener="#{equiBean.registrarEquipo()}" update="@form"
-				style="background:blue; color:white; padding:10px;"></p:commandLink>
+			<p:commandLink value="Registrar Equipo" actionListener="#{equiBean.registrarEquipo()}" update="@form"
+				style="background:green; color:white; padding:10px;"></p:commandLink>
 		</center>
 	</h:form>
 	<br></br>

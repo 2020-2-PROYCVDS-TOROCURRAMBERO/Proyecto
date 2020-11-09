@@ -20,48 +20,49 @@
 	<title>Login</title>
 </h:head>
 <h:body class="my-login-page">
+	<body style = "background: url(http://laboratorio.is.escuelaing.edu.co/wp-content/uploads/2014/06/Screen-Shot-2018-06-07-at-2.00.40-PM.png) no-repeat ; background-size: 102% 100%;">
+	</body>
 	<br></br>
-	<div style="padding:10px; width:100%; background:#4169E1; color:white; font-size:150%;">
-		<center>Registro laboratorio de informatica</center>
+	<div style="padding:30px; width:100%; background:#4169E1; color:white; font-size:500%;">
+		<center>Registro Laboratorio de Informática</center>
 	</div>
 	<br></br>
 
-	<section class="h-100" style="margin:auto">
-		<div class="container h-100">
-			<div class="row justify-content-md-center h-100">
+	<section class="h-200" style="margin:auto ; padding:130px">
+		<div class="container h-200">
+			<div class="row justify-content-md-center h-200">
 				<div class="card-wrapper">
 
 					<div class="card fat">
 						<div class="card-body">
-							<h1 class="card-title" style="text-align: center">Login</h1>
+							<h1 class="card-title" style="text-align: center ; font-size:450%">Iniciar Sesión</h1>
 							<h:form class="my-login-validation" id="formulario">
 								<p:messages id="messages" closable="true" />
 
 								<div class="form-group">
 
-									<label for="email">email</label>
-									<input style=" height: 30px ; font-size: 18px" id="email" type="email"
+									<label for="email" style="font-size:250%">Correo Electrónico</label>
+									<input style=" height: 50px ; font-size: 40px" id="email" type="email"
 										class="form-control" name="email" value="" required="true" autofocus="true"
 										jsf:value="#{sesBean.email}" />
 									<div class="invalid-feedback">
-										Introduzca Email valido.
+										Introduzca un Correo Electrónico válido.
 									</div>
 
 								</div>
 								<div class="form-group">
-									<label for="password">Password
-									</label>
-									<input style=" height: 30px ; font-size: 18px " id="password" type="password"
+									<label for="password" style="font-size:250%">Contraseña</label>
+									<input style=" height: 50px ; font-size: 40px " id="password" type="password"
 										class="form-control" name="password" required="true" data-eye="true"
 										autofocus="true" jsf:value="#{sesBean.password}" />
 									<div class="invalid-feedback">
-										Introduzca contraseña
+										Introduzca Contraseña
 									</div>
 
 								</div>
 								<div class="form-group m-0">
 									<p:commandButton type="submit" class="btn btn-primary btn-block"
-										value="Iniciar Sesion" actionListener="#{sesBean.login()}">
+										value="Iniciar Sesión" actionListener="#{sesBean.login()}">
 
 										<f:ajax execute="@form" render="email password" />
 

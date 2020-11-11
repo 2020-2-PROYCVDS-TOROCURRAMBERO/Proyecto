@@ -123,7 +123,7 @@
 				<br></br>
 				<p:calendar value="#{elmBean.fechaAdquisicion}"></p:calendar>
 				<br></br>
-				<h:outputLabel value="Categoria:"></h:outputLabel>
+				<h:outputLabel value="Categoría"></h:outputLabel>
 				<br></br>
 				<p:selectOneMenu id="categoria" value="#{elmBean.categoria}" style="width:150px">
 					<f:selectItem itemLabel="TORRE" itemValue="TORRE" noSelectionOption="true" />
@@ -143,7 +143,7 @@
 		<div style="text-align:left;">
 			<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Elementos Vinculados">
 			</p:outputLabel>
-			<br></br>Nota: Para registrar el equipo es necesario que el equipo cuente con un elemento de cada categoria
+			<br></br>Nota: Para registrar el equipo es necesario que el equipo cuente con un elemento de cada categoría.
 			<br></br>
 			<br></br>
 			<p:dataTable value="#{equiBean.getElementos()}" var="el" class="perso">

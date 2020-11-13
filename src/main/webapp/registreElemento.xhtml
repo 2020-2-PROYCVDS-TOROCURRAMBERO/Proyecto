@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+ <h:head><title>Registrar Elementos</title>
+    <body style = "background: url(https://i.pinimg.com/originals/2c/6a/fb/2c6afb5684c13cb738032d101e3c776e.jpg) no-repeat ; background-size: 101% 150%;">
+	</body>
+  	<style type="text/css">
+ 		.my_test li{
+ 			display:inline;
+ 			padding:10px;
+ 			margin:10px;
+ 		}
+ 		.pers{
+ 			color:white; 
+ 			background:#1B8344;
+ 			padding:5px;
+ 			margin:5px;	
+ 			width:100%;
+ 		}
+ 		.pers ul li{
+ 			padding:5px;
+ 			margin:5px;
+ 		}
+ 		.temp{
+ 			font-size:20px;
+ 		}
+ 		.ui-paginator{
+ 			background:white;
+ 		}
+ 		.ui-datatable-tablewrapper table thead tr th{
+ 			background:#1B8344;
+ 			color:white;
+ 		} 
+ 		.ui-datatable-data tr td{
+ 			background:white;
+ 		}
+ 		.pers{
+			width:100%;
+			background:#1B8344;
+		}
+ 	</style>
+ </h:head>
+ 
+ <h:body style= "margin:0px; padding:0px;">
+ 
+ <br></br>
+ 
+ 	<h:form>
+ 		<div style="margin:0px; padding:5px; background:#1B8344; width:100%">
+ 			<div style="text-align:right;">
+				<ul class="my_test">
+					<li><h:commandLink value="Regresar" actionListener="#{sesBean.regrese()}" style="color:white;"></h:commandLink></li>
+					<li style="color:white;">#{sesBean.getUsuario().getNombre()} #{sesBean.getUsuario().getApellido()}</li>
+					<li><h:commandLink value="Log out" actionListener="#{sesBean.logout()}" style="color:white; background:gray; padding:10px;"></h:commandLink></li>
+				</ul>
+			</div>
+ 		</div>
+	</h:form>
+	#{elmBean.setId(0)}
+	#{elmBean.setFabricante(null)}
+	#{elmBean.setReferencia(null)}
+	#{elmBean.setFechaAdquisicion(null)}
+	#{elmBean.setCategoria(null)}
+	<h:form id="m_form">
+		
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Registrar Elemento"></p:outputLabel>
+		<br></br>
+			
+		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Número del elemento:"></p:outputLabel>
+			
+			
+			
+		<p:growl id="growl" showDetail="true" sticky="true" />
+		<p:inputText styleClass="p-col-fixed" style="width:50px" value="#{elmBean.id}">
+			<p:ajax event="keyup" update="elmdis"></p:ajax>
+		</p:inputText>
+			
+			
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Disponible:"></p:outputLabel>
+		<p:outputLabel value="#{elmBean.getElemento() eq null}" id="elmdis">
+		</p:outputLabel>
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Fabricante:"></p:outputLabel>
+		<p:inputText value="#{elmBean.fabricante}"></p:inputText>
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Referencia:"></p:outputLabel>
+		<p:inputText value="#{elmBean.referencia}"></p:inputText>
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Fecha de Adquisición:"></p:outputLabel>
+		<p:calendar value="#{elmBean.fechaAdquisicion}"></p:calendar>
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Categoría:"></p:outputLabel>
+		<br></br>
+		<br></br>
+		
+		 <p:selectOneMenu id="categoria" value="#{elmBean.categoria}" style="width:150px">
+		 <f:selectItem itemLabel="TORRE" itemValue="TORRE" noSelectionOption="true" />
+		 <f:selectItem itemLabel="PANTALLA" itemValue="PANTALLA" noSelectionOption="true" />
+		 <f:selectItem itemLabel="MOUSE" itemValue="MOUSE" noSelectionOption="true" />
+		 <f:selectItem itemLabel="TECLADO" itemValue="TECLADO" noSelectionOption="true" />
+		 </p:selectOneMenu>
+		<br></br>
+		<br></br>
+		<p:commandLink value="Registrar elemento" actionListener="#{elmBean.registrarElemento()}" update="m_form" style="background:green; color:white; padding:10px;"></p:commandLink>
+		<br></br>
+		
+		<br></br>
+		<p:dataTable value="#{sesBean.getHistorialElementos()}" var="elm" rows="10" paginator="true">
+			<p:column headerText="Numeros ">${elm.getId()}</p:column>
+			<p:column headerText="Fabricante ">${elm.getFabricante()}</p:column>
+			<p:column headerText="Referencia ">${elm.getReferencia()}</p:column>
+			<p:column headerText="Categoria ">${elm.getCategoria()}</p:column>
+			<p:column headerText="Fecha adquisicion ">${elm.getFechaAdquisicion()}</p:column>
+		</p:dataTable>
+	</h:form>
+	<br></br>
+	<div class="pers">
+		Algunos enlaces de interés:<br></br>
+		<ul>
+			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingeniería Julio Garavito</a></li>
+			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de Informática</a></li>
+		</ul>
+	</div>
+				
+ </h:body>
+</html>

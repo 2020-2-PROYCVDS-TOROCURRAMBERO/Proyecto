@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+
+ <h:head><title>Dar de baja Equipo</title>
+  	<style type="text/css">
+ 		.my_test li{
+ 			display:inline;
+ 			padding:10px;
+ 			margin:10px;
+ 		}
+ 		.pers{
+ 			color:white; 
+ 			background:#1B8344;
+ 			padding:5px;
+ 			margin:5px;	
+ 			width:100%;
+ 		}
+ 		.pers ul li{
+ 			padding:5px;
+ 			margin:5px;
+ 		}
+ 		.temp{
+ 			font-size:20px;
+ 		}
+ 		.ui-datatable-data tr td{
+ 			background:white;
+ 			text-align:center;
+ 		}
+ 		.ui-datatable-tablewrapper table thead tr th{
+ 			background:	#1B8344;
+ 			color:white;
+ 			text-align:center;
+ 		}
+ 		.ui-datatable-data .ui-datatable-tablewrapper table thead tr th{
+ 			background:blue;
+ 			color:white;
+ 		}
+ 		.ui-paginator{
+ 			background:white;
+ 		}
+ 		.pers{
+			width:100%;
+			background:#1B8344;
+		}
+		.ui-dialog-titlebar{
+			background:#1B8344;
+		}
+		.ui-button span{
+			background:#1B8344;
+			color:white;
+		}
+ 	</style>
+ </h:head>
+ 
+ <h:body style="margin:0px; padding:0px;">
+ <img src="labinfo.jpg" style="width:250px;"></img>
+ <br></br>
+<br></br>
+ 
+ 	<h:form>
+ 		<div style="margin:0px; padding:5px; background:#1B8344; width:100%">
+ 			<div style="text-align:right;">
+				<ul class="my_test">
+					<li><h:commandLink value="Regresar" actionListener="#{sesBean.regrese()}" style="color:white;"></h:commandLink></li>
+					<li style="color:white;">#{sesBean.getUsuario().getNombre()} #{sesBean.getUsuario().getApellido()}</li>
+					<li><h:commandLink value="Log out" actionListener="#{sesBean.logout()}" style="color:white; background:gray; padding:10px;"></h:commandLink></li>
+				</ul>
+			</div>
+ 		</div>
+	</h:form>
+	<h:form id="m_form">
+		<p:growl id="message" showDetail="true" sticky="true"/>
+		<h:outputLabel value="  Dar de baja a un equipo:" style="font-size:30px;"></h:outputLabel>
+		<br></br>
+		<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+        	<p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+        	<p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times"/>
+    	</p:confirmDialog>     
+		<br></br>
+		<p:dataTable value="#{asoBean.getEquipos()}" var="equ" rows="10" paginator="true">
+			<p:column headerText="Id equipo" style="width:250px" filterBy="${equ.getId()}">${equ.getId()}</p:column>
+			<p:column headerText="Fecha de inicio de actividad" style="width:310px">${equ.getFechaInicioActividad()}</p:column>
+			<p:column headerText="Dar de baja:" style="width:150px">
+				<h:link outcome="elementosEquipo" value="Dar de baja">
+					<f:param value="${equ.getId()}" name="equipoBaja"/>
+				</h:link>
+			</p:column>
+
+		</p:dataTable>
+	</h:form>
+	<br></br>
+	<div class="pers">
+		Algunos enlaces de interes:<br></br>
+		<ul>
+			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingenieria Julio Garavito.</a></li>
+			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de informatica</a></li>
+		</ul>
+	</div>
+</h:body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+ <h:head><title>Asociar Elementos</title>
+  	<style type="text/css">
+ 		.my_test li{
+ 			display:inline;
+ 			padding:10px;
+ 			margin:10px;
+ 		}
+ 		.pers{
+ 			color:white; 
+ 			background:#1B8344;
+ 			padding:5px;
+ 			margin:5px;	
+ 			width:100%;
+ 		}
+ 		.pers ul li{
+ 			padding:5px;
+ 			margin:5px;
+ 		}
+ 		.temp{
+ 			font-size:20px;
+ 		}
+ 		.ui-paginator{
+ 			background:white;
+ 		}
+ 		.ui-datatable-tablewrapper table thead tr th{
+ 			background:#1B8344;
+ 			color:white;
+ 		} 
+ 		.ui-datatable-data tr td{
+ 			background:white;
+ 		}
+ 		.pers{
+			width:100%;
+			background:#1B8344;
+		}
+		.ui-button span{
+			background:#1B8344;
+			color:white;
+		}
+		.pers{
+			width:100%;
+			background:#1B8344;
+		}
+ 	</style>
+ </h:head>
+ 
+ <h:body style="margin:0px; padding:0px;">
+ <img src="labinfo.jpg" style="width:250px;"></img>
+ <br></br>
+<br></br>
+ 
+ 	<h:form>
+ 		<div style="margin:0px; padding:5px; background:#1B8344; width:100%">
+ 			<div style="text-align:right;">
+				<ul class="my_test">
+					<li><h:commandLink value="Regresar" actionListener="#{sesBean.regrese()}" style="color:white;"></h:commandLink></li>
+					<li style="color:white;">#{sesBean.getUsuario().getNombre()} #{sesBean.getUsuario().getApellido()}</li>
+					<li><h:commandLink value="Log out" actionListener="#{sesBean.logout()}" style="color:white; padding:10px; background:gray;"></h:commandLink></li>
+				</ul>
+			</div>
+ 		</div>
+	</h:form>
+	<br></br>
+	<center><h1>Asociar Equipo</h1></center>
+	<br></br>
+	<h3>En este formulario usted podra asociar equipos a los respectivos laboratorios</h3>
+	<h:form id="m_form">
+		<p:dataTable value="#{asoBean.getLaboratorios()}" var="lab" rows="20" paginator="true">
+			<p:column headerText="Id laboratorio" filterBy="${lab.getId()}">${lab.getId()}</p:column>
+			<p:column headerText="Nombre laboratorio" filterBy="${lab.getNombre()}">${lab.getNombre()}</p:column>
+			<p:column headerText="Revisar laboratorio">
+				<p:button outcome="equipos" value="Ver Laboratorio" >
+					<f:param name="laboratorio" value="${lab.getId()}" />
+				</p:button>
+			</p:column>
+		</p:dataTable>
+	</h:form>
+	<br></br>
+	<div class="pers">
+		Algunos enlaces de interes:<br></br>
+		<ul>
+			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingenieria Julio Garavito.</a></li>
+			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de informatica</a></li>
+		</ul>
+	</div>
+
+</h:body>
+</html>

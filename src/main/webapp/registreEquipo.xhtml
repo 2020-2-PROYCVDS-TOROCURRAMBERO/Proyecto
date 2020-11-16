@@ -81,28 +81,29 @@
 	</h:form>
 	<h:form id="m_form">
 		<p:growl id="growl" showDetail="true" sticky="true" />
-		<h:panelGrid columns="2" cellpadding="8">
 			<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Registrar Equipo">
 			</p:outputLabel>
 			<br></br>
-			<br></br>
+			
 			<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Número del Equipo:"></p:outputLabel>
-			<p:inputText styleClass="p-col-fixed" style="width:50px ; font-size:150%" value="#{equiBean.id}">
+			<p:inputText styleClass="p-col-fixed" style="width:50px ; font-size:150% ; position:absolute ; top:130px ; left:420px" value="#{equiBean.id}">
 				<p:ajax event="keyup" update="disp"></p:ajax>
 			</p:inputText>
-			
+			<br></br>
 			<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Disponible:"></p:outputLabel>
 			
-			<p:outputLabel value="#{equiBean.getEquipo() eq null}" style="color:red ; font-size:150%" id="disp"> </p:outputLabel>
+			<p:outputLabel value="#{equiBean.getEquipo() eq null}" style="font-size:150% ; color:red ; position:absolute ; top:181px ; left:420px" id="disp"> </p:outputLabel>
 			
+			<br></br>
 			<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Fecha de Inicio de Actividad:"></p:outputLabel>
-			<p:calendar value="#{equiBean.fechaInicioActividad}" style="font-size:150%"></p:calendar>
-			
+			<p:calendar value="#{equiBean.fechaInicioActividad}" styleClass="p-col-fixed" style="width:50px ; font-size:150% ; position:absolute ; top:212px ; left:420px"></p:calendar>
+			<br></br>
+			<br></br>
 			<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Fecha de Adquisición:"></p:outputLabel>
-			<p:calendar value="#{equiBean.fechaAdquisicion}" style="font-size:150%"></p:calendar>
+			<p:calendar value="#{equiBean.fechaAdquisicion}" styleClass="p-col-fixed" style="width:50px ; font-size:150% ; position:absolute ; top:272px ; left:420px"></p:calendar>
 			<br></br>
 			<br></br>
-			<p:commandButton id="imageBtn" value="Registrar nuevo Equipo" type="button" />
+			<p:commandButton style="width:200px ; font-size:100% ; position:absolute ; top:332px ; left:420px" id="imageBtn" value="Registrar nuevo Equipo" type="button" />
 			<p:overlayPanel id="imagePanel" for="imageBtn" hideEffect="fade">
 				<h1>Registrar elemento</h1>
 				<br></br>
@@ -141,9 +142,9 @@
 					style="background:#4169E1; color:white; padding:10px;"></p:commandLink>
 			</p:overlayPanel>
 			<br></br>
+			<br></br>
 			<center>
 			</center>
-		</h:panelGrid>
 		<div style="text-align:left;">
 			<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Elementos Vinculados">
 			</p:outputLabel>

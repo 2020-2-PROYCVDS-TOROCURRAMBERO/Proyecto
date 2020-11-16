@@ -4,6 +4,8 @@ xmlns:h="http://xmlns.jcp.org/jsf/html"
 xmlns:f="http://java.sun.com/jsf/core"
 xmlns:p="http://primefaces.org/ui">
  <h:head><title>Registrar Laboratorio</title>
+ <body style = "background: url(https://www.colores.org.es/imagenes_colores/azul-claro.jpg) no-repeat ; background-size: 101% 150%;">
+ </body>
   	<style type="text/css">
  		.my_test li{
  			display:inline;
@@ -44,7 +46,6 @@ xmlns:p="http://primefaces.org/ui">
  </h:head>
  
  <h:body style="margin:0px; padding:0px;">
- <img src="labinfo.jpg" style="width:250px;"></img>
  <br></br>
  
  	<h:form>
@@ -64,24 +65,29 @@ xmlns:p="http://primefaces.org/ui">
 	#{laboBean.startEquipos()}
 	<h:form id="m_from">
 		<p:growl id="growl" showDetail="true" sticky="true" />
-		<center><h1>REGISTRAR LABORATORIO</h1></center>
-		<h:panelGrid columns="2" cellpadding="8">
-		<p:outputLabel value="En este formulario realizara el registro de un laboratorio con su respectiva informacion:"></p:outputLabel>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Registrar Laboratorio"></p:outputLabel>
+		
 		<br></br>
 		<br></br>		
-		<p:outputLabel value="Numero de Laboratorio:"></p:outputLabel>
-		<p:inputText value="#{laboBean.id}">
+		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Número del Laboratorio:"></p:outputLabel>
+		<p:inputText styleClass="p-col-fixed" style="width:50px ; font-size:150% ; position:absolute ; top:150px ; left:550px" value="#{laboBean.id}">
 			<p:ajax event="keyup" update="out1"/>
 		</p:inputText>
-		<p:outputLabel value="Disponible:"></p:outputLabel>
-		<p:outputLabel id="out1" value="#{laboBean.getLaboratorio() eq null}"></p:outputLabel>
-		<p:outputLabel value="Nombre del Laboratorio"></p:outputLabel>
-		<p:inputText value="#{laboBean.nombre}"></p:inputText>
-		<p:outputLabel value="Capacidad de equipos en el Laboratorio:"></p:outputLabel>
-		<p:inputText value="#{laboBean.capacidad}"></p:inputText>
-		<p:outputLabel value="Fecha de Apertura del Laboratorio"></p:outputLabel>
-		<p:calendar value="#{laboBean.fechaApertura}"></p:calendar>	
-		</h:panelGrid>
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Disponible:"></p:outputLabel>
+		<p:outputLabel style="font-size:150% ; color:red ; position:absolute ; top:199px ; left:550px" id="out1" value="#{laboBean.getLaboratorio() eq null}"></p:outputLabel>
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Nombre del Laboratorio:"></p:outputLabel>
+		<p:inputText style="font-size:150% ; position:absolute ; top:230px ; left:550px" value="#{laboBean.nombre}"></p:inputText>
+		<br></br>
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Capacidad de Equipos en el Laboratorio:"></p:outputLabel>
+		<p:inputText style="font-size:150% ; position:absolute ; top:290px ; left:550px" value="#{laboBean.capacidad}"></p:inputText>
+		<br></br>
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Fecha de Apertura del Laboratorio:"></p:outputLabel>
+		<p:calendar style="font-size:150% ; position:absolute ; top:350px ; left:550px" value="#{laboBean.fechaApertura}"></p:calendar>	
+		
 		<br></br>
 		<br></br>
 		<p:dataTable value="#{laboBean.getEquipos()}" var="equ" paginator="true" rows="10">
@@ -92,10 +98,13 @@ xmlns:p="http://primefaces.org/ui">
 		</p:dataTable>
 		<br></br>
 		<br></br>
-		<p:outputLabel value="Equipos disponibles:"></p:outputLabel>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:280%" value="Equipos Disponibles"></p:outputLabel>
 		<br></br>
-		<p:outputLabel value="En caso de no a ver equipos disponibles, registre equipos:  "></p:outputLabel>
-		<p:button outcome="registreEquipo" value="Registar Equipo"></p:button>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:100%" value="Nota: En caso de no ver equipos disponibles, registre equipos."></p:outputLabel>
+		<br></br>
+		<br></br>
+		<p:button style="background:blue ; color:white" outcome="registreEquipo" value="Registar Equipo"></p:button>
+		<br></br>
 		<br></br>
 		<p:dataTable value="#{laboBean.getEquipossinLab()}" var="equipo" paginator="true" rows="10">
 			<p:column headerText="Id">${equipo.getId()}</p:column>
@@ -109,10 +118,10 @@ xmlns:p="http://primefaces.org/ui">
 	</h:form>
 	<br></br>
 	<div class="pers">
-		Algunos enlaces de interes:<br></br>
+		Algunos enlaces de interés:<br></br>
 		<ul>
-			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingenieria Julio Garavito.</a></li>
-			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de informatica</a></li>
+			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingeniería Julio Garavito</a></li>
+			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de Informática</a></li>
 		</ul>
 	</div>
 </h:body>

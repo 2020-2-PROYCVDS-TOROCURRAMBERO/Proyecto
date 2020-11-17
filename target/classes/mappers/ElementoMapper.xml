@@ -45,8 +45,8 @@
 	
 	
 	<insert parameterType="map" id="AgregarElemento">
-		insert into elemento (id,categoria,fabricante,referecia,fechaadquisicion,fechainicioactividad,fechafinactividad)
-		values (#{id},#{cat},#{fab},#{ref},#{fecAq},#{fecIn},#{fecFin})
+		insert into elemento (categoria,fabricante,referecia,fechaadquisicion,fechainicioactividad,fechafinactividad)
+		values (#{cat},#{fab},#{ref},#{fecAq},#{fecIn},#{fecFin})
 	</insert>
 	
 	

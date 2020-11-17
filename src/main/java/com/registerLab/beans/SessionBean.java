@@ -52,7 +52,9 @@ public class SessionBean extends BaseBeanRegisterLab{
 	public void login() {
 		try {
 			Subject currentUser = SecurityUtils.getSubject();
-			UsernamePasswordToken token = new UsernamePasswordToken(email, password);
+			String hex = new Sha256Hash(password).toHex();
+			System.out.println(hex);
+			UsernamePasswordToken token = new UsernamePasswordToken(email, hex);
 			token.setRememberMe(true);
 			currentUser.login(token);
 			FacesContext.getCurrentInstance().getExternalContext().redirect("useradmin.xhtml");
@@ -162,10 +164,10 @@ public class SessionBean extends BaseBeanRegisterLab{
 			}
 		}
 		
-		public void registrarElemento(int id, String categoria, String fabricante, String referecia,Date fechaadquisicion,Date fechainicioactividad,Date fechafinactividad) {
+		public void registrarElemento(String categoria, String fabricante, String referecia,Date fechaadquisicion,Date fechainicioactividad,Date fechafinactividad) {
 			try {
 				
-				servicios.AgregarElemento(id, categoria, fabricante, referecia, fechaadquisicion, fechainicioactividad, fechafinactividad);
+				servicios.AgregarElemento(categoria, fabricante, referecia, fechaadquisicion, fechainicioactividad, fechafinactividad);
 				
 			} catch (Exception e) {
 				

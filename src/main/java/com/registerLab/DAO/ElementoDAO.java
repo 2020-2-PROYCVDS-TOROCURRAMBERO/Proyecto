@@ -13,7 +13,7 @@ public interface ElementoDAO {
 	
 	Elemento getElemento(int id);
 	
-	public void AgregarElemento(int id,
+	public void AgregarElemento(
 			String categoria,
 			String fabricante,
 			String referencia,

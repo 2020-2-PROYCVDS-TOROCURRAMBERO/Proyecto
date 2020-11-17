@@ -107,12 +107,6 @@
 			<p:overlayPanel id="imagePanel" for="imageBtn" hideEffect="fade">
 				<h1>Registrar elemento</h1>
 				<br></br>
-				<h:outputLabel value="Numero de elemento:"></h:outputLabel>
-				<br></br>
-				<p:inputText value="#{elmBean.id}">
-					<p:ajax event="keyup" update="elmdis"></p:ajax>
-				</p:inputText>
-				<br></br>
 				Disponible: <h:outputLabel value="#{elmBean.getElemento() eq null}" id="elmdis">
 				</h:outputLabel>
 				<br></br>

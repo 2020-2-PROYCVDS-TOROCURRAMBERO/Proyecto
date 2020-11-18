@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3c.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
 <h:head>
+	<body style = "background: url(https://images.homify.com/c_fill,f_auto,q_0,w_740/v1526483607/p/photo/image/2561426/3.jpg) no-repeat ; background-size: 102% 100%;">
+	</body>
 	<title>Dar de baja Equipo</title>
 	<style type="text/css">
 		.my_test li {
@@ -71,7 +73,6 @@
 </h:head>
 
 <h:body style="margin:0px; padding:0px;">
-	<img src="labinfo.jpg" style="width:250px;"></img>
 	<br></br>
 	<br></br>
 	<h:form>
@@ -94,11 +95,11 @@
 	</h:form>
 	#{bajaeqBean.setEquipo(equiBajaBean.getEquipoBaja())}
 	#{bajaeqBean.validar()}
-	<h2 style="margin:2px;">ID Equipo: #{bajaeqBean.getEquipo()}</h2>
+	<h2 style="color:black ; font:Arial ; font-size:200%">ID Equipo: #{bajaeqBean.getEquipo()}</h2>
 	<h:form>
 		#{equiBajaBean.setEquipoBaja(bajaeqBean.getEquipo())}
 		<p:growl id="message" showDetail="true" sticky="true" />
-		<b>Elementos a dar de baja:</b>
+		<b style="color:black ; font:Arial ; font-size:200%">Elementos a dar de baja:</b>
 		<br></br>
 		<p:dataTable value="#{bajaeqBean.getDarBaja()}" var="baj" paginator="true" rows="10"
 			rendered="#{bajaeqBean.getDarBaja().size()>0}">
@@ -107,7 +108,7 @@
 			<p:column headerText="Referencia">${baj.getReferencia()}</p:column>
 			<p:column headerText="Categoria">${baj.getCategoria()}</p:column>
 		</p:dataTable>
-		<b>Elementos a Desasociar:</b>
+		<b style="color:black ; font:Arial ; font-size:200%">Elementos a Desasociar:</b>
 		<br></br>
 		<p:dataTable value="#{bajaeqBean.getDesasociar()}" var="baj" paginator="true" rows="10"
 			rendered="#{bajaeqBean.getDesasociar().size()>0}">
@@ -150,11 +151,11 @@
 	</h:form>
 	<br></br>
 	<div class="pers">
-		Algunos enlaces de interes:<br></br>
+		Algunos enlaces de interés:<br></br>
 		<ul>
-			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingenieria Julio
-					Garavito.</a></li>
-			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de informatica</a>
+			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingeniería Julio
+					Garavito</a></li>
+			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de Informática</a>
 			</li>
 		</ul>
 	</div>

@@ -2,6 +2,8 @@
 <html xmlns="http://www.w3c.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core" xmlns:p="http://primefaces.org/ui">
 <h:head>
+	<body style = "background: url(https://guarrocasas.com/sites/default/files/styles/default/public/productos/0406731_Cartulina%20L_Verde%20Claro__240_gr.jpg?itok=toudHk3c) no-repeat ; background-size: 102% 100%;">
+	</body>
 	<title>Registrar Laboratorio</title>
 	<style type="text/css">
 		.my_test li {
@@ -48,7 +50,6 @@
 </h:head>
 
 <h:body style="margin:0px; padding:0px;">
-	<img src="labinfo.jpg" style="width:250px;"></img>
 	<br></br>
 
 	<h:form>
@@ -72,7 +73,7 @@
 	<!-- Actualiza datos session bean -->
 	#{eqnovsBean.setEquipo(eqnovBean.getEquipo())}
 	<h:form id="m_from">
-		<p:outputLabel value="Elementos de el equipo #{eqnovsBean.getEquipo()}" />
+		<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Elementos del Equipo #{eqnovsBean.getEquipo()}" />
 		<br></br>
 		<p:dataTable value="#{eqnovsBean.get().getElementos()}" var="elm">
 			<p:column headerText="Id">${elm.getId()}</p:column>
@@ -86,7 +87,7 @@
 			</p:column>
 		</p:dataTable>
 		<br></br>
-		<p:outputLabel value="novedades"></p:outputLabel>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Novedades"></p:outputLabel>
 		<p:dataTable id="novedades" value="#{eqnovsBean.getNovedades()}" var="novedad" paginator="true" rows="10"
 			paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}          {Exporters}">
 			<f:facet name="{Exporters}">
@@ -109,11 +110,11 @@
 	</h:form>
 	<br></br>
 	<div class="pers">
-		Algunos enlaces de interes:<br></br>
+		Algunos enlaces de interés:<br></br>
 		<ul>
-			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingenieria Julio
-					Garavito.</a></li>
-			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de informatica</a>
+			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingeniería Julio
+					Garavito</a></li>
+			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de Informática</a>
 			</li>
 		</ul>
 	</div>

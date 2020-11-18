@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3c.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html" xmlns:p="http://primefaces.org/ui">
 <h:head>
+    <body style = "background: url(https://www.colores.org.es/imagenes_colores/azul-claro.jpg) no-repeat ; background-size: 102% 100%;">
+	</body>
 	<title>Asociar Elementos</title>
 	<style type="text/css">
 		.my_test li {
@@ -62,7 +64,6 @@
 </h:head>
 
 <h:body style="margin:0px; padding:0px;">
-	<img src="labinfo.jpg" style="width:250px;"></img>
 	<br></br>
 	<br></br>
 
@@ -87,19 +88,20 @@
 	<table border="1" style="border-collapse: collapse; width:100%">
 		<tr>
 			<td colspan="2" style="background:#1B8344; color:white">
-				<center>Equipo</center>
+				<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Equipo">
+			    </p:outputLabel>
 			</td>
 		</tr>
 		<tr>
-			<td>Id</td>
+			<td style="color:black ; font:Arial ; font-size:200%">ID</td>
 			<td>#{asoBean.getEquipo().getId()}</td>
 		</tr>
 		<tr>
-			<td>Fecha inicio de actividad</td>
+			<td style="color:black ; font:Arial ; font-size:200%">Fecha Inicio de Actividad</td>
 			<td>#{asoBean.getEquipo().getFechaInicioActividad()}</td>
 		</tr>
 		<tr>
-			<td>Fecha Fin de actividad</td>
+			<td style="color:black ; font:Arial ; font-size:200%">Fecha Fin de Actividad</td>
 			<td>#{asoBean.getEquipo().getFechaFinActividad()}</td>
 		</tr>
 	</table>
@@ -115,7 +117,7 @@
 			<p:column headerText="Categoria">${elm.getCategoria()}</p:column>
 		</p:dataTable>
 		<br></br>
-		<b>Selecciona los elementos a asociar:</b>
+		<b style="color:black ; font:Arial ; font-size:280%">Seleccione los elementos a asociar:</b>
 		<br></br>
 		<p:growl id="growl" showDetail="true" sticky="true" />
 		<br></br>
@@ -146,11 +148,11 @@
 	</h:form>
 	<br></br>
 	<div class="pers">
-		Algunos enlaces de interes:<br></br>
+		Algunos enlaces de interés:<br></br>
 		<ul>
-			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingenieria Julio
+			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingeniería Julio
 					Garavito</a></li>
-			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de informatica</a>
+			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de Informática</a>
 			</li>
 		</ul>
 	</div>

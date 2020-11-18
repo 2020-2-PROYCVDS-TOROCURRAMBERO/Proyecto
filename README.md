@@ -21,7 +21,7 @@ postgres://lrffvglxpncscr:1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c
 heroku pg:psql postgresql-pointy-79270 --app cvdsproyecto
 
 ## Usuarios Registrados:
-* E-Mail:
+* Correo Electrónico:
 juan@escuelaing.edu.co
 * Contraseña:
 prueba

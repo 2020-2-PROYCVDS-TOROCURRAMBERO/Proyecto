@@ -24,4 +24,4 @@ heroku pg:psql postgresql-pointy-79270 --app cvdsproyecto
 * E-Mail:
 juan@escuelaing.edu.co
 * Contraseña:
-cl
+prueba

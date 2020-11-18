@@ -12,8 +12,8 @@ public interface ElementoMapper {
 	
 	public Elemento getElemento(@Param("ElemId") int id);
 	
-	public void AgregarElemento(@Param("id") int id
-			,@Param("cat") String categoria
+	public void AgregarElemento(
+			@Param("cat") String categoria
 			,@Param("fab") String fabricante
 			,@Param("ref") String referencia
 			,@Param("fecAq") Date fechaAdquisicion

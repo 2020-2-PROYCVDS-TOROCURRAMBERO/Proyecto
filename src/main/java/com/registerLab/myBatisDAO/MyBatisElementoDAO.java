@@ -23,9 +23,9 @@ public class MyBatisElementoDAO implements ElementoDAO{
 	}
 	
 	@Override
-	public void AgregarElemento(int id, String categoria, String fabricante, String referencia, Date fechaAdquisicion, Date fechaInicioActividad, Date fechaFinActividad) 
+	public void AgregarElemento(String categoria, String fabricante, String referencia, Date fechaAdquisicion, Date fechaInicioActividad, Date fechaFinActividad) 
 			throws ECILabException {
-		if(getElemento(id)!= null) throw new ECILabException("Ya existe un Elemento con esta id");
+
 		
 		if(fechaFinActividad != null) throw new ECILabException("la fecha fin de actividad debe ser nula");
 		
@@ -33,7 +33,7 @@ public class MyBatisElementoDAO implements ElementoDAO{
 		
 		if(fechaAdquisicion==null) throw new ECILabException("la fecha de aquisicion, no debe ser nula");
 		
-		mapper.AgregarElemento(id, categoria, fabricante, referencia, fechaAdquisicion, fechaInicioActividad, fechaFinActividad);
+		mapper.AgregarElemento(categoria, fabricante, referencia, fechaAdquisicion, fechaInicioActividad, fechaFinActividad);
 		
 		
 	}

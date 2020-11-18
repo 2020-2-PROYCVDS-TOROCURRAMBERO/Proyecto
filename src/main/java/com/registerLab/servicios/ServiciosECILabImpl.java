@@ -120,8 +120,8 @@ public  class ServiciosECILabImpl implements ServiciosECILab{
 	 * @param fechaInicioActividad cuando el equipo inicio a ser utilizado
 	 * @param fechaFinActivida fecha en que el equipo termina suvida util  
 	 */
-	public void AgregarElemento(int id, String categoria, String fabricante, String referencia, Date fechaAdquisicion, Date fechaInicioActividad, Date fechaFinActivida) throws ECILabException {
-		elemento.AgregarElemento(id, categoria, fabricante, referencia, fechaAdquisicion, fechaInicioActividad, fechaFinActivida);
+	public void AgregarElemento(String categoria, String fabricante, String referencia, Date fechaAdquisicion, Date fechaInicioActividad, Date fechaFinActivida) throws ECILabException {
+		elemento.AgregarElemento(categoria, fabricante, referencia, fechaAdquisicion, fechaInicioActividad, fechaFinActivida);
 	}
 	
 	/*

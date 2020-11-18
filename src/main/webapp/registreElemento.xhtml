@@ -58,7 +58,6 @@ xmlns:p="http://primefaces.org/ui">
 			</div>
  		</div>
 	</h:form>
-	#{elmBean.setId(0)}
 	#{elmBean.setFabricante(null)}
 	#{elmBean.setReferencia(null)}
 	#{elmBean.setFechaAdquisicion(null)}
@@ -68,17 +67,11 @@ xmlns:p="http://primefaces.org/ui">
 		<br></br>
 		<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Registrar Elemento"></p:outputLabel>
 		<br></br>
-		
-		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Número del elemento:"></p:outputLabel>
 			
 		<p:growl id="growl" showDetail="true" sticky="true" />
-				
-		<p:inputText styleClass="p-col-fixed" style="width:50px ; font-size:150% ; position:absolute ; top:150px ; left:350px" value="#{elmBean.id}">
-			<p:ajax event="keyup" update="elmdis"></p:ajax>
-		</p:inputText>
-		<br></br>		
-		
-		
+
+		<br></br>
+		<br></br>
 		
 		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Disponible:"></p:outputLabel>
 		<p:outputLabel style="font-size:150% ; color:red ; position:absolute ; top:199px ; left:350px" value="#{elmBean.getElemento() eq null}" id="elmdis">

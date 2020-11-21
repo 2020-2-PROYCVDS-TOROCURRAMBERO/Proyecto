@@ -14,7 +14,6 @@
 
 		.pers {
 			color: white;
-			background: #1B8344;
 			padding: 5px;
 			margin: 5px;
 			width: 100%;
@@ -35,13 +34,11 @@
 		}
 
 		.ui-datatable-tablewrapper table thead tr th {
-			background: #1B8344;
 			color: white;
 			text-align: center;
 		}
 
 		.ui-datatable-data .ui-datatable-tablewrapper table thead tr th {
-			background: #1B8344;
 			color: white;
 		}
 
@@ -55,19 +52,15 @@
 		}
 
 		.ui-dialog-titlebar {
-			background: #1B8344;
 		}
 
 		.ui-button span {
-			background: #1B8344;
 		}
 
 		.ui-dialog-titlebar {
-			background: #1B8344;
 		}
 
 		.ui-button span {
-			background: #1B8344;
 		}
 	</style>
 </h:head>
@@ -99,7 +92,7 @@
 	<h:form>
 		#{equiBajaBean.setEquipoBaja(bajaeqBean.getEquipo())}
 		<p:growl id="message" showDetail="true" sticky="true" />
-		<b style="color:black ; font:Arial ; font-size:200%">Elementos a dar de baja:</b>
+		<b style="color:black ; font:Arial ; font-size:200%">Elementos a Dar de Baja:</b>
 		<br></br>
 		<p:dataTable value="#{bajaeqBean.getDarBaja()}" var="baj" paginator="true" rows="10"
 			rendered="#{bajaeqBean.getDarBaja().size()>0}">
@@ -141,11 +134,11 @@
 		<center>
 			<p:commandLink value="Dar de baja a este equipo" actionListener="#{bajaeqBean.darDeBajaEquipo()}"
 				update="@form" style="padding:10px; background:#1B8344; color:white;">
-				<p:confirm header="Confirmation" message="Estas seguro?" icon="pi pi-exclamation-triangle" />
+				<p:confirm header="Advertencia" message="¿Estás seguro que deseas Dar de Baja este equipo?" icon="pi pi-exclamation-triangle" />
 			</p:commandLink>
 		</center>
 		<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
-			<p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check" />
+			<p:commandButton value="Sí" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check" />
 			<p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times" />
 		</p:confirmDialog>
 	</h:form>

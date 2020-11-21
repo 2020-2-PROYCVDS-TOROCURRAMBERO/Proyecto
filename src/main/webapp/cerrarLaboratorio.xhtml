@@ -4,9 +4,9 @@ xmlns:h="http://xmlns.jcp.org/jsf/html"
 xmlns:f="http://java.sun.com/jsf/core"
 xmlns:p="http://primefaces.org/ui">
 
- <h:head><title>Dar de baja Equipo</title>
- <body style = "background: url(https://rocafort.com/wp-content/uploads/2019/07/VALLEJO-70949.png) no-repeat ; background-size: 101% 150%;">
- </body>
+ <h:head><title>Cerrar Laboratorio</title>
+ <body style = "background: url(https://ep01.epimg.net/verne/imagenes/2018/12/03/articulo/1543853044_168056_1544109691_rrss_normal.jpg) no-repeat ; background-size: 101% 150%;">
+	</body>
   	<style type="text/css">
  		.my_test li{
  			display:inline;
@@ -14,7 +14,8 @@ xmlns:p="http://primefaces.org/ui">
  			margin:10px;
  		}
  		.pers{
- 			color:white;
+ 			color:white; 
+ 			background:#1B8344;
  			padding:5px;
  			margin:5px;	
  			width:100%;
@@ -31,12 +32,9 @@ xmlns:p="http://primefaces.org/ui">
  			text-align:center;
  		}
  		.ui-datatable-tablewrapper table thead tr th{
+ 			background:	#1B8344;
  			color:white;
  			text-align:center;
- 		}
- 		.ui-datatable-data .ui-datatable-tablewrapper table thead tr th{
- 			background:blue;
- 			color:white;
  		}
  		.ui-paginator{
  			background:white;
@@ -46,9 +44,10 @@ xmlns:p="http://primefaces.org/ui">
 			background:#1B8344;
 		}
 		.ui-dialog-titlebar{
+			background:#1B8344;
+			color:white;
 		}
 		.ui-button span{
-			color:white;
 		}
  	</style>
  </h:head>
@@ -61,7 +60,7 @@ xmlns:p="http://primefaces.org/ui">
  		<div style="margin:0px; padding:5px; background:#1B8344; width:100%">
  			<div style="text-align:right;">
 				<ul class="my_test">
-					<li><h:commandLink value="Regresar" actionListener="#{sesBean.regrese()}" style="color:white;"></h:commandLink></li>
+					<li><a href="useradmin.xhtml" style="color:white;">Regresar</a></li>
 					<li style="color:white;">#{sesBean.getUsuario().getNombre()} #{sesBean.getUsuario().getApellido()}</li>
 					<li><h:commandLink value="Log out" actionListener="#{sesBean.logout()}" style="color:white; background:gray; padding:10px;"></h:commandLink></li>
 				</ul>
@@ -69,24 +68,20 @@ xmlns:p="http://primefaces.org/ui">
  		</div>
 	</h:form>
 	<h:form id="m_form">
+		<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Cerrar Laboratorio"></p:outputLabel>
 		<p:growl id="message" showDetail="true" sticky="true"/>
-		<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Dar de baja un Equipo"></p:outputLabel>
-		<br></br>
-		<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
-        	<p:commandButton value="Sí" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
-        	<p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times"/>
-    	</p:confirmDialog>     
-		<br></br>
-		<p:dataTable value="#{asoBean.getEquipos()}" var="equ" rows="10" paginator="true">
-			<p:column headerText="Id equipo" style="width:250px" filterBy="${equ.getId()}">${equ.getId()}</p:column>
-			<p:column headerText="Fecha de inicio de actividad" style="width:310px">${equ.getFechaInicioActividad()}</p:column>
-			<p:column headerText="Dar de baja:" style="width:150px">
-				<h:link outcome="elementosEquipo" value="Dar de baja">
-					<f:param value="${equ.getId()}" name="equipoBaja"/>
-				</h:link>
-			</p:column>
-
+		<p:dataTable value="#{cerrarLabBean.getLaboratorios()}" var="laboratorio" paginator="true" rows="10">
+			<p:column headerText="Id Laboratorio" filterBy="${laboratorio.getId()}">${laboratorio.getId()}</p:column>
+			<p:column headerText="Nombre Laboratorio" filterBy="${laboratorio.getNombre()}">${laboratorio.getNombre()}</p:column>
+			<p:column headerText="Fecha Creacion">${laboratorio.getFechaApertura()}</p:column>
+			<p:column headerText="Cerrar Laboratorio"><p:commandLink value="Cerrar" actionListener="#{cerrarLabBean.cerrarLaboratorio(laboratorio)}" update="@form">
+				<p:confirm header="Advertencia" message="¿Estás seguro que deseas Cerrar este Laboratorio?" icon="pi pi-exclamation-triangle" />
+			</p:commandLink></p:column>
 		</p:dataTable>
+		<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
+        		<p:commandButton value="Sí" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+        		<p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times"/>
+    	</p:confirmDialog>   
 	</h:form>
 	<br></br>
 	<div class="pers">

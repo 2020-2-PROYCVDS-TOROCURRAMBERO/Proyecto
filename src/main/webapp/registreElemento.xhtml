@@ -66,7 +66,6 @@ xmlns:p="http://primefaces.org/ui">
 		
 		<br></br>
 		<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Registrar Elemento"></p:outputLabel>
-		<br></br>
 			
 		<p:growl id="growl" showDetail="true" sticky="true" />
 
@@ -74,8 +73,9 @@ xmlns:p="http://primefaces.org/ui">
 		<br></br>
 		
 		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Disponible:"></p:outputLabel>
-		<p:outputLabel style="font-size:150% ; color:red ; position:absolute ; top:199px ; left:350px" value="#{elmBean.getElemento() eq null}" id="elmdis">
+		<p:outputLabel style="font-size:150% ; color:red ; position:absolute ; top:182px ; left:350px" value="#{elmBean.getElemento() eq null}" id="elmdis">
 		</p:outputLabel>
+		<br></br>
 		<br></br>
 		<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Fabricante:"></p:outputLabel>
 		<p:inputText style="font-size:150% ; position:absolute ; top:230px ; left:350px" value="#{elmBean.fabricante}"></p:inputText>
@@ -99,9 +99,9 @@ xmlns:p="http://primefaces.org/ui">
 		 </p:selectOneMenu>
 		<br></br>
 		<br></br>
-		<p:commandLink value="Registrar elemento" actionListener="#{elmBean.registrarElemento()}" update="m_form" style="background:green; color:white; padding:10px; font-size:120%"></p:commandLink>
+		<p:commandLink value="Registrar elemento" actionListener="#{elmBean.registrarElemento()}" update="m_form" style="background:green; color:white; padding:10px; font-size:120% ; position:absolute ; top:467px ; left:350px"></p:commandLink>
 		<br></br>
-		
+		<br></br>
 		<br></br>
 		<p:dataTable value="#{sesBean.getHistorialElementos()}" var="elm" rows="10" paginator="true">
 			<p:column headerText="Numeros ">${elm.getId()}</p:column>

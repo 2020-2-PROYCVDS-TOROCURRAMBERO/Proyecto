@@ -39,8 +39,6 @@ xmlns:p="http://primefaces.org/ui">
  			background:#1B8344;
  		}
  		.ui-button span{
- 			background:#1B8344;
- 			color:white;
  		}
  		.pers{
 			width:100%;
@@ -78,12 +76,12 @@ xmlns:p="http://primefaces.org/ui">
 			<p:column headerText="Activo">${elm.getFechaFinActividad() eq null}</p:column>
 			<p:column headerText="Dar de baja:">
 				<p:commandLink value="Dar de baja" actionListener="#{elemBajaBean.darBaja(elm)}" update="@form" style=" color:black; padding:10px;">
-					<p:confirm header="Confirmation" message="Estas seguro?" icon="pi pi-exclamation-triangle" />
+					<p:confirm header="Advertencia" message="¿Estás seguro que deseas Dar de Baja este elemento?" icon="pi pi-exclamation-triangle" />
 				</p:commandLink>
 			</p:column>
 		</p:dataTable>
 		<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
-        		<p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
+        		<p:commandButton value="Sí" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check"/>
         		<p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times"/>
     	</p:confirmDialog>   
 	</h:form>

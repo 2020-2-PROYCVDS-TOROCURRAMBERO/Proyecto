@@ -21,7 +21,24 @@ postgres://lrffvglxpncscr:1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c
 heroku pg:psql postgresql-pointy-79270 --app cvdsproyecto
 
 ## Usuarios Registrados:
+
+**Juan Sebastián Muñoz Cardona**
+
 * Correo Electrónico:
-juan@escuelaing.edu.co
+juan.munoz@mail.escuelaing.edu.co
 * Contraseña:
 prueba
+
+**Alejandro Toro Daza**
+
+* Correo Electrónico:
+alejandro.toro@mail.escuelaing.edu.co
+* Contraseña:
+aletoro123
+
+**Jairo Eduardo Pulido Rincón**
+
+* Correo Electrónico:
+jairo.pulido@mail.escuelaing.edu.co
+* Contraseña:
+jairo123

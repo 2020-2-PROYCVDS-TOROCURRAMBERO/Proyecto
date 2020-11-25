@@ -27,6 +27,8 @@ jairo.pulido@mail.escuelaing.edu.co
 * Contraseña:
 jairo123
 
+[![Managed with Taiga.io](https://img.shields.io/badge/managed%20with-TAIGA.io-709f14.svg)](https://tree.taiga.io/project/juanmunozd-historial-de-equipos-labinfo/ "Managed with Taiga.io")
+
 ## Credenciales para las Bases de Datos:
 * Host:           
 ec2-52-44-235-121.compute-1.amazonaws.com

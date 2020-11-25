@@ -50,3 +50,7 @@ heroku pg:psql postgresql-pointy-79270 --app cvdsproyecto
 ## Badge Codacy
 	
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/ca73ba7b8c624a1e88b5a6e94e57889e)](https://www.codacy.com/gh/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/dashboard?utm_source=github.com&utm_medium=referral&utm_content=JuanMunozD/CVDS8&utm_campaign=Badge_Grade)
+
+## Badge CircleCI
+	
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto)

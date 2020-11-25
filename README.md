@@ -2,6 +2,7 @@
 
 ## Aplicación desplegada en Heroku
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9647c404fa014ae2ac87cadf1111f7d5)](https://app.codacy.com/gh/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto?utm_source=github.com&utm_medium=referral&utm_content=2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto&utm_campaign=Badge_Grade)
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://cvdsproyecto.herokuapp.com/)
 
 ## Usuarios Registrados

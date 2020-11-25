@@ -47,4 +47,6 @@ postgres://lrffvglxpncscr:1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c
 * Heroku CLI:     
 heroku pg:psql postgresql-pointy-79270 --app cvdsproyecto
 
-
+Badge **Codacy**
+	
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ca73ba7b8c624a1e88b5a6e94e57889e)](https://www.codacy.com/gh/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/dashboard?utm_source=github.com&utm_medium=referral&utm_content=JuanMunozD/CVDS8&utm_campaign=Badge_Grade)

@@ -1,0 +1,96 @@
+	<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+ <h:head><title>Reportes de Elemento</title>
+ <body style = "background: url(https://www.colorazul.top/wp-content/uploads/2020/04/Azul-claro.jpg) no-repeat ; background-size: 102% 100%;">
+ </body>
+  	<style type="text/css">
+ 		.my_test li{
+ 			display:inline;
+ 			padding:10px;
+ 			margin:10px;
+ 		}
+ 		.pers{
+ 			color:white; 
+ 			background:#1B8344;
+ 			padding:5px;
+ 			margin:5px;	
+ 			width:100%;
+ 		}
+ 		.pers ul li{
+ 			padding:5px;
+ 			margin:5px;
+ 		}
+ 		.temp{
+ 			font-size:20px;
+ 		}
+ 		.ui-datatable-data tr td{
+ 			background:white;
+ 		}
+ 		.ui-paginator{
+ 			background:white;
+ 		}
+ 		.ui-datatable-tablewrapper table thead tr th{
+ 			background:	#1B8344;
+ 			color:white;
+ 		}
+ 		.pers{
+			width:100%;
+			background:#1B8344;
+		}
+ 	</style>
+ </h:head>
+ 
+ <h:body style= "margin:0px; padding:0px;">
+ <br></br>
+ 	#{regElmBean.setIdElemento(repsElmBean.getElemento())}
+ 	#{ENovBean.setElemento(repsElmBean.getElemento())}
+ 	<h:form>
+ 		<div style="margin:0px; padding:5px; background:#1B8344; width:100%">
+ 			<div style="text-align:right;">
+				<ul class="my_test">
+					<li><a href="useradmin.xhtml" style="color:white">Regresar</a></li>
+					<li style="color:white;">#{sesBean.getUsuario().getNombre()} #{sesBean.getUsuario().getApellido()}</li>
+					<li><h:commandLink value="Log out" actionListener="#{sesBean.logout()}" style="color:white; background:gray; padding:10px;"></h:commandLink></li>
+				</ul>
+			</div>
+ 		</div>
+	</h:form>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Reportes del Elemento">
+			</p:outputLabel>
+	<br></br>
+	<h:form id="x_form">
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Reportes del Elemento con Id: #{repsElmBean.getElemento()}"/>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Fabricante: #{regElmBean.getElemento().getFabricante()}"/>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Referencia: #{regElmBean.getElemento().getReferencia()}"/>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Tipo de Elemento: #{regElmBean.getElemento().getCategoria()}"/>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Estado del Elemento: #{regElmBean.ElementoActivo()}"/>
+	
+	<br></br>
+	<br></br>
+	<p:dataTable id="novedades" value="#{ENovBean.getNovedad()}" var="novedad" paginator="true" rows="10" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}          {Exporters}">
+	<f:facet name="{Exporters}">
+				<h:commandLink>
+                    <img src="excel.png" style="width:20px; height:20px;"></img>
+                    <p:dataExporter type="xls" target="novedades" fileName="novedades elemento #{repsElmBean.getElemento()} #{regElmBean.getElemento().getFabricante()} - #{regElmBean.getElemento().getReferencia()}" />
+                </h:commandLink>
+     </f:facet>
+	<p:column headerText="Id" filterBy="#{novedad.getId()}"><p:outputLabel value="${novedad.getId()}"/></p:column>
+			<p:column headerText="Descripcion" filterBy="#{novedad.getDescripcion()}" ><p:outputLabel value="${novedad.getDescripcion()}"/></p:column>
+			<p:column headerText="Justificacion" filterBy="#{novedad.getJustificacion()}" ><p:outputLabel value="${novedad.getJustificacion()}"/></p:column>
+			<p:column headerText="Fecha Novedad" filterBy="#{novedad.getFechaNovedad()}" ><p:outputLabel value="${novedad.getFechaNovedad()}"/></p:column>
+			<p:column headerText="Equipo Asociado" filterBy="#{novedad.getEquipo()}" ><p:outputLabel value="${novedad.getEquipo()}"/></p:column>
+	</p:dataTable>
+	<br></br>
+	<br></br>
+	<div align="center"><p:button outcome="reporteElementos" value="Regresar"></p:button></div>
+	</h:form>	
+ </h:body>
+</html>

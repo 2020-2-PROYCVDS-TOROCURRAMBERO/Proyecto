@@ -27,7 +27,7 @@ jairo.pulido@mail.escuelaing.edu.co
 * Contraseña:
 jairo123
 
-## Credenciales para las bases de datos:
+## Credenciales para las Bases de Datos:
 * Host:           
 ec2-52-44-235-121.compute-1.amazonaws.com
 * Database:       

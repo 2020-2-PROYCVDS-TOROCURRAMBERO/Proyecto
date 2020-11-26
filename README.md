@@ -10,50 +10,75 @@ Ciclos de Vida del Desarrollo de Software
 
 ## Integrantes
 
-* Juan Sebastián Muñoz Cardona
-* Alejandro Toro Daza
-* Jairo Eduardo Pulido Rincón
+Juan Sebastián Muñoz Cardona
+
+Alejandro Toro Daza
+
+Jairo Eduardo Pulido Rincón
 
 ## Profesor
 
-* Julián Mauricio Velasco Briceño
+Julián Mauricio Velasco Briceño
 
 ## Roles Asignados
 
-* Julián Mauricio Velasco Briceño (Dueño del Producto)
-* Juan Sebastián Muñoz Cardona (Usuario)
-* Alejandro Toro Daza (Usuario)
-* Jairo Eduardo Pulido Rincón (Usuario)
+Julián Mauricio Velasco Briceño (Dueño del Producto)
+
+Juan Sebastián Muñoz Cardona (Usuario)
+
+Alejandro Toro Daza (Usuario)
+
+Jairo Eduardo Pulido Rincón (Usuario)
 
 ## Usuarios Registrados
 
-**Julián Mauricio Velasco Briceño**
+### Julián Mauricio Velasco Briceño
 
-* Correo Electrónico:
+**Correo Electrónico:**
+
 julian.velasco-b@escuelaing.edu.co
-* Contraseña:
+
+**Contraseña:**
+
 julian123
 
-**Juan Sebastián Muñoz Cardona**
+-----------------------------------------------------------------------------------
 
-* Correo Electrónico:
+### Juan Sebastián Muñoz Cardona
+
+**Correo Electrónico:**
+
 juan.munoz@mail.escuelaing.edu.co
-* Contraseña:
+
+**Contraseña:**
+
 prueba
 
-**Alejandro Toro Daza**
+-----------------------------------------------------------------------------------
 
-* Correo Electrónico:
+### Alejandro Toro Daza
+
+**Correo Electrónico:**
+
 alejandro.toro@mail.escuelaing.edu.co
-* Contraseña:
+
+**Contraseña:**
+
 aletoro123
 
-**Jairo Eduardo Pulido Rincón**
+-----------------------------------------------------------------------------------
 
-* Correo Electrónico:
+### Jairo Eduardo Pulido Rincón
+
+**Correo Electrónico:**
+
 jairo.pulido@mail.escuelaing.edu.co
-* Contraseña:
+
+**Contraseña:**
+
 jairo123
+
+-----------------------------------------------------------------------------------
 
 ## Descripción del Producto
 
@@ -69,13 +94,13 @@ Para acceder a la página web del Laboratorio de Informática, ingresamos a la U
 
 A continuación, vemos la página de inicio de sesión, en la que el usuario puede iniciar sesión en la plataforma del Laboratorio de Informática haciendo uso de sus respectivas credenciales.
 
-![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaInicioDeSesion.PNG)
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/InicioDeSesion.PNG)
 
 #### Menú Principal
 
 Luego de iniciar sesión, nos encontramos con la siguiente interfaz en la que el usuario puede realizar todas y cada una de las acciones expresadas en pantalla. En la parte superior izquierda se encuentra una barra con cada uno de los menús, cada uno con un desplegable al que el usuario puede ingresar. Entre ellos se encuentran: **Equipo**, **Elemento**, **Laboratorio** y **Novedad**.
 
-![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaMenuPrincipal.PNG)
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/MenuPrincipal.PNG)
 
 #### Página de Registrar Equipo
 
@@ -156,10 +181,10 @@ En el tercer y último Sprint del proyecto, pudimos cumplir satisfactoriamente c
 *------------Colocar imágen en este lugar------------*
 
 ## Credenciales para las Bases de Datos
-* Host: ec2-52-44-235-121.compute-1.amazonaws.com
-* Database: deckjsi71c2o3h
-* User: lrffvglxpncscr
-* Port: 5432
-* Password: 1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef
-* URI: postgres://lrffvglxpncscr:1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef@ec2-52-44-235-121.compute-1.amazonaws.com:5432/deckjsi71c2o3h
-* Heroku CLI: heroku pg:psql postgresql-pointy-79270 --app cvdsproyecto
+Host: ec2-52-44-235-121.compute-1.amazonaws.com
+Database: deckjsi71c2o3h
+User: lrffvglxpncscr
+Port: 5432
+Password: 1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef
+URI: postgres://lrffvglxpncscr:1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef@ec2-52-44-235-121.compute-1.amazonaws.com:5432/deckjsi71c2o3h
+Heroku CLI: heroku pg:psql postgresql-pointy-79270 --app cvdsproyecto

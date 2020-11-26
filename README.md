@@ -71,6 +71,12 @@ A continuación, vemos la página de inicio de sesión, en la que el usuario pue
 
 ![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaInicioDeSesion.PNG)
 
+#### Menú Principal
+
+Luego de iniciar sesión, nos encontramos con la siguiente interfaz en la que el usuario puede realizar todas y cada una de las acciones expresadas en pantalla. En la parte superior izquierda se encuentra una barra con cada uno de los menús, cada uno con un desplegable al que el usuario puede ingresar. Entre ellos se encuentran: **Equipo**, **Elemento**, **Laboratorio** y **Novedad**.
+
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaMenuPrincipal.PNG)
+
 ## Aplicación desplegada en Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://cvdsproyecto.herokuapp.com/)

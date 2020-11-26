@@ -81,7 +81,7 @@ Luego de iniciar sesión, nos encontramos con la siguiente interfaz en la que el
 
 Para registrar un equipo, nos dirigimos al menú de la parte superior izquierda del **Menú Principal**, presionamos clic en donde dice **Equipo**. En el menú desplegable, presionamos clic en **Registre Equipo**. En esta página el usuario puede registrar un equipo rellenando los campos y presionando clic en el botón **Registrar Equipo** localizado en la parte inferior de la página. (Nota: Para registrar un equipo primero deben existir los elementos correspondientes de dicho equipo).
 
-*Colocar imágen en este lugar.*
+*------------Colocar imágen en este lugar------------*
 
 #### Página de Registrar Elemento
 
@@ -93,7 +93,7 @@ Para registrar un elemento, nos dirigimos al menú de la parte superior izquierd
 
 Para registrar un elemento, nos dirigimos al menú de la parte superior izquierda del **Menú Principal**, presionamos clic en donde dice **Laboratorio**. En el menú desplegable, presionamos clic en **Registre Laboratorio**. En esta página el usuario puede registrar un laboratorio con el cual posteriormente registrará equipos al respectivo laboratorio, rellenando los campos y presionando clic en el botón **Registrar Laboratorio**.
 
-*Colocar imágen en este lugar.*
+*------------Colocar imágen en este lugar------------*
 
 #### Página de Registrar Novedad
 
@@ -109,27 +109,43 @@ Para registrar una novedad, nos dirigimos al menú de la parte superior izquierd
 
 ### Diagrama de Clases
 
-*Colocar imágen en este lugar.*
-
-### Descripción de la arquitectura y del Stack de tecnologías utilizado
-
-*Colocar texto en este lugar.*
+*------------Colocar imágen en este lugar------------*
 
 ## Enlace a la aplicación en Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://cvdsproyecto.herokuapp.com/)
 
-## Enlace al sistema de integración continua
+## Enlace al sistema de Integración Continua (Circle CI)
 	
 [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto)
 
-## Taiga
-
-[![Managed with Taiga.io](https://img.shields.io/badge/managed%20with-TAIGA.io-709f14.svg)](https://tree.taiga.io/project/juanmunozd-historial-de-equipos-labinfo/ "Managed with Taiga.io")
-
-## Badge Codacy
+## Codacy
 	
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/345169c7075b441fa4ddc246a6a71c9b)](https://www.codacy.com/gh/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto&amp;utm_campaign=Badge_Grade)
+
+## Descripción del Proceso
+
+### Metodología
+
+Teniendo en cuenta la situación que se vivió tanto en el país de residencia (Colombia) de los tres integrantes como en el mundo de la pandemia, el trabajo fue realizado completamente de manera virtual. No hubo ninguna reunión presencial, todas las reuniones fueron realizadas de forma 100% virtual utilizando la plataforma de **Microsoft Teams**, en la cual realizábamos las sustentaciones de retroalimentación con el profesor, trabajábamos grupalmente desarrollando los Sprints en el horario de clase, y por fuera del horario de clase cada uno por su cuenta realizó las tareas que les fueron asignadas en el **Taiga**.
+
+### Release-Burndown Chart del Proyecto
+
+*------------Colocar imágen en este lugar------------*
+
+-----------------------------------------------------------------------------------
+
+## Sprint 1
+
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/Sprint1.PNG)
+
+## Sprint 2
+
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/Sprint2.PNG)
+
+### Enlace a Taiga
+
+[![Managed with Taiga.io](https://img.shields.io/badge/managed%20with-TAIGA.io-709f14.svg)](https://tree.taiga.io/project/juanmunozd-historial-de-equipos-labinfo/ "Managed with Taiga.io")
 
 ## Credenciales para las Bases de Datos
 * Host:           

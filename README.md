@@ -55,6 +55,16 @@ jairo.pulido@mail.escuelaing.edu.co
 * Contraseña:
 jairo123
 
+## Descripción del Producto
+
+### Descripción General
+
+Algo
+
+### Manual de Usuario
+
+Algo
+
 ## Aplicación desplegada en Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://cvdsproyecto.herokuapp.com/)

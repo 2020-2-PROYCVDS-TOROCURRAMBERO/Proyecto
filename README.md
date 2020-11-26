@@ -99,7 +99,7 @@ Para registrar un elemento, nos dirigimos al menú de la parte superior izquierd
 
 Para registrar una novedad, nos dirigimos al menú de la parte superior izquierda del **Menú Principal**, presionamos clic en donde dice **Novedad**. En el menú desplegable, presionamos clic en **Registre Novedad**. En esta página el usuario puede registrar una novedad con la cual puede ingresar detalles y la descripción del respectivo equipo y elemento, rellenando los campos y presionando clic en el botón **Registrar Novedad**.
 
-![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaRegistrarNovedad.PNG)
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaRegistrarNovedades.PNG)
 
 ## Aplicación desplegada en Heroku
 

@@ -32,28 +32,28 @@ Jairo Eduardo Pulido Rincón (Usuario)
 
 ## Usuarios Registrados
 
-**Julián Mauricio Velasco Briceño**
+### Julián Mauricio Velasco Briceño
 
 **Correo Electrónico:**
 julian.velasco-b@escuelaing.edu.co
 **Contraseña:**
 julian123
 
-**Juan Sebastián Muñoz Cardona**
+### Juan Sebastián Muñoz Cardona
 
 **Correo Electrónico:**
 juan.munoz@mail.escuelaing.edu.co
 **Contraseña:**
 prueba
 
-**Alejandro Toro Daza**
+### Alejandro Toro Daza
 
 **Correo Electrónico:**
 alejandro.toro@mail.escuelaing.edu.co
 **Contraseña:**
 aletoro123
 
-**Jairo Eduardo Pulido Rincón**
+### Jairo Eduardo Pulido Rincón
 
 **Correo Electrónico:**
 jairo.pulido@mail.escuelaing.edu.co
@@ -161,10 +161,10 @@ En el tercer y último Sprint del proyecto, pudimos cumplir satisfactoriamente c
 *------------Colocar imágen en este lugar------------*
 
 ## Credenciales para las Bases de Datos
-* Host: ec2-52-44-235-121.compute-1.amazonaws.com
-* Database: deckjsi71c2o3h
-* User: lrffvglxpncscr
-* Port: 5432
-* Password: 1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef
-* URI: postgres://lrffvglxpncscr:1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef@ec2-52-44-235-121.compute-1.amazonaws.com:5432/deckjsi71c2o3h
-* Heroku CLI: heroku pg:psql postgresql-pointy-79270 --app cvdsproyecto
+Host: ec2-52-44-235-121.compute-1.amazonaws.com
+Database: deckjsi71c2o3h
+User: lrffvglxpncscr
+Port: 5432
+Password: 1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef
+URI: postgres://lrffvglxpncscr:1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef@ec2-52-44-235-121.compute-1.amazonaws.com:5432/deckjsi71c2o3h
+Heroku CLI: heroku pg:psql postgresql-pointy-79270 --app cvdsproyecto

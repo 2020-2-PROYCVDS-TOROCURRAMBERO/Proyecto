@@ -63,7 +63,7 @@ El Registro Laboratorio de Informática es una herramienta cuyo objetivo es prov
 
 ### Manual de Usuario
 
-
+Para acceder a la página web del Registro Laboratorio de Informática, ingresamos a la URL que es: https://cvdsproyecto.herokuapp.com/.
 
 #### Página de Inicio de Sesión
 

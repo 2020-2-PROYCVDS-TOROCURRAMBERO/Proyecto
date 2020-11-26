@@ -3,8 +3,10 @@ package com.registerLab.DAO ;
 import java.sql.Date;
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
 
 import com.registerLab.ECILabException;
+import com.registerLab.entities.Equipo;
 import com.registerLab.entities.Laboratorio;
 
 public interface LaboratorioDAO{

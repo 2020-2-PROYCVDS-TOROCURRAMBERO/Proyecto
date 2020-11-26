@@ -13,6 +13,7 @@ import org.apache.shiro.SecurityUtils;
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.registerLab.ECILabException;
+import com.registerLab.entities.Elemento;
 import com.registerLab.entities.Equipo;
 import com.registerLab.entities.Laboratorio;
 import com.registerLab.servicios.ServiciosECILabImpl;

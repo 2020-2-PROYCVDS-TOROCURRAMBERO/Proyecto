@@ -3,9 +3,11 @@ package com.registerLab.mappers;
 import java.sql.Date;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
 
+import com.registerLab.entities.Elemento;
 
 import com.registerLab.entities.Equipo;
 

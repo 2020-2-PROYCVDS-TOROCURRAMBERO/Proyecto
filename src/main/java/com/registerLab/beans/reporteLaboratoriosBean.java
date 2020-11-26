@@ -23,6 +23,7 @@ import org.primefaces.model.charts.optionconfig.legend.LegendLabel;
 import org.primefaces.model.charts.optionconfig.title.Title;
 
 import com.google.inject.Injector;
+import com.registerLab.entities.Elemento;
 import com.registerLab.entities.Laboratorio;
 import com.registerLab.entities.Novedad;
 import com.registerLab.servicios.ServiciosECILabImpl;

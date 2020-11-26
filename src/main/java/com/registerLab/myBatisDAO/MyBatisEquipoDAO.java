@@ -3,12 +3,17 @@ package com.registerLab.myBatisDAO;
 import java.sql.Date;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.google.inject.Inject;
 
 import com.registerLab.ECILabException;
 
 import com.registerLab.DAO.EquipoDAO;
+
+import com.registerLab.myBatisDAO.MyBatisElementoDAO;
+
+import com.registerLab.entities.Elemento;
 
 import com.registerLab.entities.Equipo;
 

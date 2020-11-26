@@ -1,7 +1,9 @@
 package com.registerLab.DAO;
 
+import java.sql.Date;
 import java.util.ArrayList;
 
+import org.apache.ibatis.annotations.Param;
 
 import com.registerLab.ECILabException;
 import com.registerLab.entities.Novedad;

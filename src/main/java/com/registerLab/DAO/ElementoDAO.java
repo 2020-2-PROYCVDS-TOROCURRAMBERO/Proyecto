@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.registerLab.entities.Elemento;
+import com.registerLab.entities.Equipo;
+import com.registerLab.entities.Usuario;
 import com.registerLab.ECILabException;
 
 public interface ElementoDAO {

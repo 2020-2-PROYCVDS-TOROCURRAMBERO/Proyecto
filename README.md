@@ -79,15 +79,27 @@ Luego de iniciar sesión, nos encontramos con la siguiente interfaz en la que el
 
 #### Página de Registrar Equipo
 
-Para registrar un equipo, nos dirigimos al menú de la parte superior izquierda del **Menú Principal**, en donde dice **Registre Equipo**. En esta página el usuario puede registrar un equipo rellenando los campos y presionando clic en el botón **Registrar Equipo** localizado en la parte inferior de la página. (Nota: Para registrar un equipo primero deben existir los elementos correspondientes de dicho equipo).
+Para registrar un equipo, nos dirigimos al menú de la parte superior izquierda del **Menú Principal**, presionamos clic en donde dice **Equipo**. En el menú desplegable, presionamos clic en **Registre Equipo**. En esta página el usuario puede registrar un equipo rellenando los campos y presionando clic en el botón **Registrar Equipo** localizado en la parte inferior de la página. (Nota: Para registrar un equipo primero deben existir los elementos correspondientes de dicho equipo).
 
 *Colocar imágen en este lugar.*
 
 #### Página de Registrar Elemento
 
-Para registrar un elemento, nos dirigimos al menú de la parte superior izquierda del **Menú Principal**, en donde dice **Registre Elemento**. En esta página el usuario puede registrar un elemento con el cual posteriormente registrará equipos con dichos elementos rellenando los campos y presionando clic en el botón **Registrar Elemento**.
+Para registrar un elemento, nos dirigimos al menú de la parte superior izquierda del **Menú Principal**, presionamos clic en donde dice **Elemento**. En el menú desplegable, presionamos clic en **Registre Elemento**. En esta página el usuario puede registrar un elemento con el cual posteriormente registrará equipos con dichos elementos rellenando los campos y presionando clic en el botón **Registrar Elemento**.
 
 ![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaRegistrarElemento.PNG)
+
+#### Página de Registrar Laboratorio
+
+Para registrar un elemento, nos dirigimos al menú de la parte superior izquierda del **Menú Principal**, presionamos clic en donde dice **Laboratorio**. En el menú desplegable, presionamos clic en **Registre Laboratorio**. En esta página el usuario puede registrar un laboratorio con el cual posteriormente registrará equipos al respectivo laboratorio, rellenando los campos y presionando clic en el botón **Registrar Laboratorio**.
+
+*Colocar imágen en este lugar.*
+
+#### Página de Registrar Novedad
+
+Para registrar una novedad, nos dirigimos al menú de la parte superior izquierda del **Menú Principal**, presionamos clic en donde dice **Novedad**. En el menú desplegable, presionamos clic en **Registre Novedad**. En esta página el usuario puede registrar una novedad con la cual puede ingresar detalles y la descripción del respectivo equipo y elemento, rellenando los campos y presionando clic en el botón **Registrar Novedad**.
+
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaRegistrarNovedad.PNG)
 
 ## Aplicación desplegada en Heroku
 

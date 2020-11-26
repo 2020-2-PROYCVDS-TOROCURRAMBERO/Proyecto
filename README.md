@@ -63,6 +63,8 @@ El Registro Laboratorio de Informática es una herramienta cuyo objetivo es prov
 
 ### Manual de Usuario
 
+
+
 #### Página de Inicio de Sesión
 
 A continuación, vemos la página de inicio de sesión, en la que el usuario puede iniciar sesión en la plataforma del Registro Laboratorio de Informática haciendo uso de sus respectivas credenciales.

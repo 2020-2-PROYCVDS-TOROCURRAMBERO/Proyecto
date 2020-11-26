@@ -63,7 +63,19 @@ El Registro Laboratorio de Informática es una herramienta cuyo objetivo es prov
 
 ### Manual de Usuario
 
+Para acceder a la página web del Registro Laboratorio de Informática, ingresamos a la URL que es: https://cvdsproyecto.herokuapp.com/.
+
+#### Página de Inicio de Sesión
+
+A continuación, vemos la página de inicio de sesión, en la que el usuario puede iniciar sesión en la plataforma del Registro Laboratorio de Informática haciendo uso de sus respectivas credenciales.
+
 ![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaInicioDeSesion.PNG)
+
+#### Menú Principal
+
+Luego de iniciar sesión, nos encontramos con la siguiente interfaz en la que el usuario puede realizar todas y cada una de las acciones expresadas en pantalla. En la parte superior izquierda se encuentra una barra con cada uno de los menús, cada uno con un desplegable al que el usuario puede ingresar. Entre ellos se encuentran: **Equipo**, **Elemento**, **Laboratorio** y **Novedad**.
+
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaMenuPrincipal.PNG)
 
 ## Aplicación desplegada en Heroku
 

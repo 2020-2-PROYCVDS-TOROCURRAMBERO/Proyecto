@@ -63,7 +63,7 @@ El Registro Laboratorio de Informática es una herramienta cuyo objetivo es prov
 
 ### Manual de Usuario
 
-Algo
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaInicioDeSesion.PNG)
 
 ## Aplicación desplegada en Heroku
 

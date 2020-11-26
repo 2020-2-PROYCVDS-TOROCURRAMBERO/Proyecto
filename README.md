@@ -10,9 +10,9 @@ Ciclos de Vida del Desarrollo de Software
 
 ## Integrantes
 
-*  Juan Sebastián Muñoz Cardona
-*  Alejandro Toro Daza
-*  Jairo Eduardo Pulido Rincón
+  * Juan Sebastián Muñoz Cardona
+  * Alejandro Toro Daza
+  * Jairo Eduardo Pulido Rincón
 
 ## Profesor
 

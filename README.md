@@ -101,6 +101,12 @@ Para registrar una novedad, nos dirigimos al menú de la parte superior izquierd
 
 ![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaRegistrarNovedades.PNG)
 
+## Arquitectura y Diseño detallado
+
+### Modelo E-R
+
+
+
 ## Aplicación desplegada en Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://cvdsproyecto.herokuapp.com/)

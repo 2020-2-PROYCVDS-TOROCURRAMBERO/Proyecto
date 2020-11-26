@@ -3,15 +3,11 @@ package com.registerLab.myBatisDAO;
 import java.sql.Date;
 import java.util.List;
 
-import org.apache.ibatis.annotations.Param;
 
 import com.google.inject.Inject;
 import com.registerLab.ECILabException;
-import com.registerLab.DAO.EquipoDAO;
 import com.registerLab.DAO.LaboratorioDAO;
-import com.registerLab.entities.Equipo;
 import com.registerLab.entities.Laboratorio;
-import com.registerLab.mappers.EquipoMapper;
 import com.registerLab.mappers.LaboratorioMapper;
 
 public class MyBatisLaboratorioDAO implements LaboratorioDAO{

@@ -2,10 +2,8 @@ package com.registerLab.DAO ;
 
 import java.sql.Date;
 import java.util.ArrayList;
-import java.util.List;
 
 import com.registerLab.ECILabException;
-import com.registerLab.entities.Elemento;
 import com.registerLab.entities.Equipo;
 
 public interface EquipoDAO{

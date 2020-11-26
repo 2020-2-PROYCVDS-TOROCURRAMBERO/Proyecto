@@ -11,7 +11,9 @@ Ciclos de Vida del Desarrollo de Software
 ## Integrantes
 
 Juan Sebastián Muñoz Cardona
+
 Alejandro Toro Daza
+
 Jairo Eduardo Pulido Rincón
 
 ## Profesor
@@ -21,8 +23,11 @@ Julián Mauricio Velasco Briceño
 ## Roles Asignados
 
 Julián Mauricio Velasco Briceño (Dueño del Producto)
+
 Juan Sebastián Muñoz Cardona (Usuario)
+
 Alejandro Toro Daza (Usuario)
+
 Jairo Eduardo Pulido Rincón (Usuario)
 
 ## Usuarios Registrados

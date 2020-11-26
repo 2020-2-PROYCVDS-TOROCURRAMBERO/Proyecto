@@ -1,4 +1,4 @@
-# Registro Laboratorio de Informática
+# Laboratorio de Informática
 
 ## Nombre del Curso
 
@@ -59,15 +59,15 @@ jairo123
 
 ### Descripción General
 
-El Registro Laboratorio de Informática es una herramienta cuyo objetivo es proveer al usuario una interfaz amigable en la cual el usuario es capaz de registrar elementos de tecnología a equipos de cómputo, los cuales podrá utilizar para asignarlos a sus laboratorios correspondientes, para así llevar un mejor control del inventario de cada uno de los laboratorios de la facultad de Ingeniería de Sistemas de la Escuela Colombiana de Ingeniería Julio Garavito.
+El Laboratorio de Informática es una herramienta cuyo objetivo es proveer al usuario una interfaz amigable en la cual el usuario es capaz de registrar elementos de tecnología a equipos de cómputo, los cuales podrá utilizar para asignarlos a sus laboratorios correspondientes, para así llevar un mejor control del inventario de cada uno de los laboratorios de la facultad de Ingeniería de Sistemas de la Escuela Colombiana de Ingeniería Julio Garavito.
 
 ### Manual de Usuario
 
-Para acceder a la página web del Registro Laboratorio de Informática, ingresamos a la URL que es: https://cvdsproyecto.herokuapp.com/.
+Para acceder a la página web del Laboratorio de Informática, ingresamos a la URL que es: https://cvdsproyecto.herokuapp.com/.
 
 #### Página de Inicio de Sesión
 
-A continuación, vemos la página de inicio de sesión, en la que el usuario puede iniciar sesión en la plataforma del Registro Laboratorio de Informática haciendo uso de sus respectivas credenciales.
+A continuación, vemos la página de inicio de sesión, en la que el usuario puede iniciar sesión en la plataforma del Laboratorio de Informática haciendo uso de sus respectivas credenciales.
 
 ![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaInicioDeSesion.PNG)
 

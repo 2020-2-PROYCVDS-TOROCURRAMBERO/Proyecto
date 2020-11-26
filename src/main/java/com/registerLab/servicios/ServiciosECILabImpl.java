@@ -5,8 +5,6 @@ import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.JOptionPane;
-
 import org.apache.shiro.SecurityUtils;
 
 import com.google.inject.Inject;

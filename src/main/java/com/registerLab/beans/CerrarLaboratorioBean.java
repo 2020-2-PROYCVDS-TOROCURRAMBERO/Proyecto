@@ -7,7 +7,6 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
-import org.apache.shiro.SecurityUtils;
 
 import com.google.inject.Injector;
 import com.registerLab.ECILabException;

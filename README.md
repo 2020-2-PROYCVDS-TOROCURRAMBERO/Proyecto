@@ -34,11 +34,11 @@ Jairo Eduardo Pulido Rincón (Usuario)
 
 ### Julián Mauricio Velasco Briceño
 
-#### Correo Electrónico:
+#### Correo Electrónico
 
 julian.velasco-b@escuelaing.edu.co
 
-#### Contraseña:
+#### Contraseña
 
 julian123
 
@@ -46,11 +46,11 @@ julian123
 
 ### Juan Sebastián Muñoz Cardona
 
-#### Correo Electrónico:
+#### Correo Electrónico
 
 juan.munoz@mail.escuelaing.edu.co
 
-#### Contraseña:
+#### Contraseña
 
 prueba
 
@@ -58,11 +58,11 @@ prueba
 
 ### Alejandro Toro Daza
 
-#### Correo Electrónico:
+#### Correo Electrónico
 
 alejandro.toro@mail.escuelaing.edu.co
 
-#### Contraseña:
+#### Contraseña
 
 aletoro123
 
@@ -70,11 +70,11 @@ aletoro123
 
 ### Jairo Eduardo Pulido Rincón
 
-#### Correo Electrónico:
+#### Correo Electrónico
 
 jairo.pulido@mail.escuelaing.edu.co
 
-#### Contraseña:
+#### Contraseña
 
 jairo123
 

@@ -62,15 +62,6 @@ xmlns:f="http://java.sun.com/jsf/core">
 	<br></br>
 	<br></br>
 	<p:panel id="lab">
-	<p:outputLabel style="color:black ; font:Arial ; font-size:250%" value="Equipos registrados por mes"></p:outputLabel>
-	<br></br>
-	
-	<p:barChart model="#{reportLabBean.barModel}" style="width: 1000px; height: 200px;"/>
-	<br></br>
-	<p:outputLabel style="color:black ; font:Arial ; font-size:250%" value="Elementos de los laboratorios"></p:outputLabel>
-	<br></br>
-	<p:donutChart model="#{reportLabBean.donutModel}" style="width: 1000px; height: 200px;"/>
-	<br></br>
 	<p:outputLabel style="color:black ; font:Arial ; font-size:250%" value="Laboratorios"></p:outputLabel>
 	<h:form>
 	<p:dataTable id="novedades" value="#{reportLabBean.getTotalLaboratorios()}" var="lab" paginator="true" rows="6" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}{Exporters}" rowKey="#{lab.getId()}">

@@ -2,7 +2,6 @@ package com.registerLab.beans;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
@@ -11,7 +10,6 @@ import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 
 import com.google.inject.Injector;
-import com.registerLab.entities.Elemento;
 import com.registerLab.entities.Equipo;
 import com.registerLab.entities.Laboratorio;
 import com.registerLab.entities.Novedad;

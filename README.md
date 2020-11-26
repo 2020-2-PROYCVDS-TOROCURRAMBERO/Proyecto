@@ -107,9 +107,21 @@ Para registrar una novedad, nos dirigimos al menú de la parte superior izquierd
 
 ![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/Modelo%20E-R.PNG)
 
-## Aplicación desplegada en Heroku
+### Diagrama de Clases
+
+*Colocar imágen en este lugar.*
+
+### Descripción de la arquitectura y del Stack de tecnologías utilizado
+
+*Colocar texto en este lugar.*
+
+## Enlace a la aplicación en Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://cvdsproyecto.herokuapp.com/)
+
+## Enlace al sistema de integración continua
+	
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto)
 
 ## Taiga
 
@@ -118,10 +130,6 @@ Para registrar una novedad, nos dirigimos al menú de la parte superior izquierd
 ## Badge Codacy
 	
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/345169c7075b441fa4ddc246a6a71c9b)](https://www.codacy.com/gh/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto&amp;utm_campaign=Badge_Grade)
-
-## Badge CircleCI
-	
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto)
 
 ## Credenciales para las Bases de Datos
 * Host:           

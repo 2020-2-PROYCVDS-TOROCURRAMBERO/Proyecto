@@ -88,7 +88,7 @@ El Laboratorio de Informática es una herramienta cuyo objetivo es proveer al us
 
 ### Manual de Usuario
 
-Para acceder a la página web del Laboratorio de Informática, ingresamos a la URL que es: https://cvdsproyecto.herokuapp.com/.
+Para acceder a la página web del Laboratorio de Informática, ingresamos a la URL que es: https://cvdsproyecto.herokuapp.com/
 
 #### Página de Inicio de Sesión
 

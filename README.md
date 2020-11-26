@@ -105,7 +105,7 @@ Para registrar una novedad, nos dirigimos al menú de la parte superior izquierd
 
 ### Modelo E-R
 
-
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/Modelo%20E-R.PNG)
 
 ## Aplicación desplegada en Heroku
 

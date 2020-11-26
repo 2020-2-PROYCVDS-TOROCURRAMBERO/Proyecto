@@ -77,6 +77,18 @@ Luego de iniciar sesión, nos encontramos con la siguiente interfaz en la que el
 
 ![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaMenuPrincipal.PNG)
 
+#### Página de Registrar Equipo
+
+Para registrar un equipo, nos dirigimos al menú de la parte superior izquierda del **Menú Principal**, en donde dice **Registre Equipo**. En esta página el usuario puede registrar un equipo rellenando los campos y presionando clic en el botón **Registrar Equipo** localizado en la parte inferior de la página. (Nota: Para registrar un equipo primero deben existir los elementos correspondientes de dicho equipo).
+
+*Colocar imágen en este lugar.*
+
+#### Página de Registrar Elemento
+
+Para registrar un elemento, nos dirigimos al menú de la parte superior izquierda del **Menú Principal**, en donde dice **Registre Elemento**. En esta página el usuario puede registrar un elemento con el cual posteriormente registrará equipos con dichos elementos rellenando los campos y presionando clic en el botón **Registrar Elemento**.
+
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/PaginaRegistrarElemento.PNG)
+
 ## Aplicación desplegada en Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://cvdsproyecto.herokuapp.com/)

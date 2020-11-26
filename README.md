@@ -10,49 +10,49 @@ Ciclos de Vida del Desarrollo de Software
 
 ## Integrantes
 
-  * Juan Sebastián Muñoz Cardona
-  * Alejandro Toro Daza
-  * Jairo Eduardo Pulido Rincón
+Juan Sebastián Muñoz Cardona
+Alejandro Toro Daza
+Jairo Eduardo Pulido Rincón
 
 ## Profesor
 
-* Julián Mauricio Velasco Briceño
+Julián Mauricio Velasco Briceño
 
 ## Roles Asignados
 
-* Julián Mauricio Velasco Briceño (Dueño del Producto)
-* Juan Sebastián Muñoz Cardona (Usuario)
-* Alejandro Toro Daza (Usuario)
-* Jairo Eduardo Pulido Rincón (Usuario)
+Julián Mauricio Velasco Briceño (Dueño del Producto)
+Juan Sebastián Muñoz Cardona (Usuario)
+Alejandro Toro Daza (Usuario)
+Jairo Eduardo Pulido Rincón (Usuario)
 
 ## Usuarios Registrados
 
 **Julián Mauricio Velasco Briceño**
 
-* Correo Electrónico:
+**Correo Electrónico:**
 julian.velasco-b@escuelaing.edu.co
-* Contraseña:
+**Contraseña:**
 julian123
 
 **Juan Sebastián Muñoz Cardona**
 
-* Correo Electrónico:
+**Correo Electrónico:**
 juan.munoz@mail.escuelaing.edu.co
-* Contraseña:
+**Contraseña:**
 prueba
 
 **Alejandro Toro Daza**
 
-* Correo Electrónico:
+**Correo Electrónico:**
 alejandro.toro@mail.escuelaing.edu.co
-* Contraseña:
+**Contraseña:**
 aletoro123
 
 **Jairo Eduardo Pulido Rincón**
 
-* Correo Electrónico:
+**Correo Electrónico:**
 jairo.pulido@mail.escuelaing.edu.co
-* Contraseña:
+**Contraseña:**
 jairo123
 
 ## Descripción del Producto

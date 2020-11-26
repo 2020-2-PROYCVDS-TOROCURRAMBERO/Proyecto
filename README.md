@@ -1,10 +1,42 @@
-# Proyecto
+# Registro Laboratorio de Informática
+
+## Nombre del Curso
+
+Ciclos de Vida del Desarrollo de Software
+
+## Período Académico
+
+2020-2
+
+## Integrantes
+
+Juan Sebastián Muñoz Cardona
+Alejandro Toro Daza
+Jairo Eduardo Pulido Rincón
+
+## Profesor
+
+Julián Mauricio Velasco Briceño
+
+## Roles Asignados
+
+Julián Mauricio Velasco Briceño (Dueño del Producto)
+Juan Sebastián Muñoz Cardona (Usuario)
+Alejandro Toro Daza (Usuario)
+Jairo Eduardo Pulido Rincón (Usuario)
 
 ## Aplicación desplegada en Heroku
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://cvdsproyecto.herokuapp.com/)
 
 ## Usuarios Registrados
+
+**Julián Mauricio Velasco Briceño**
+
+* Correo Electrónico:
+julian.velasco-b@escuelaing.edu.co
+* Contraseña:
+julian123
 
 **Juan Sebastián Muñoz Cardona**
 

@@ -1,23 +1,18 @@
 package com.registerLab.beans;
-
 import java.util.List;
-
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
-
 import org.apache.shiro.SecurityUtils;
-
 import com.google.inject.Injector;
 import com.registerLab.ECILabException;
 import com.registerLab.entities.Elemento;
 import com.registerLab.entities.Equipo;
 import com.registerLab.entities.Laboratorio;
 import com.registerLab.servicios.ServiciosECILabImpl;
-
 @SuppressWarnings("deprecation")
 @ManagedBean(name="asoBean")
 @RequestScoped

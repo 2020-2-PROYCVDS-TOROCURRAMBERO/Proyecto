@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:p="http://primefaces.org/ui"
+xmlns:f="http://java.sun.com/jsf/core">
+ <h:head><title>Reportes de Equipos</title>
+ <body style = "background: url(https://us.123rf.com/450wm/naiauss/naiauss1509/naiauss150900377/45703761-primer-plano-de-patr%C3%B3n-de-la-textura-de-papel-de-color-azul-claro-para-el-fondo.jpg?ver=6) no-repeat ; background-size: 102% 100%;">
+	</body>
+  	<style type="text/css">
+ 		.my_test li{
+ 			display:inline;
+ 			padding:10px;
+ 			margin:10px;
+ 		}
+ 		.pers{
+ 			color:white; 
+ 			background:#1B8344;
+ 			padding:5px;
+ 			margin:5px;	
+ 			width:100%;
+ 		}
+ 		.pers ul li{
+ 			padding:5px;
+ 			margin:5px;
+ 		}
+ 		.temp{
+ 			font-size:20px;
+ 		}
+ 		.ui-datatable-data tr td{
+ 			background:white;
+ 		}
+ 		.ui-paginator{
+ 			background:white;
+ 		}
+ 		.ui-datatable-tablewrapper table thead tr th{
+ 			background:	#1B8344;
+ 			color:white;
+ 		}
+ 		.pers{
+			width:100%;
+			background:#1B8344;
+		}
+ 	</style>
+ </h:head>
+ <h:body style= "margin:0px; padding:0px;">
+ <br></br>
+ 	<h:form>
+ 		<div style="margin:0px; padding:5px; background:#1B8344; width:100%">
+ 			<div style="text-align:right;">
+				<ul class="my_test">
+					<li><a href="reporteEquipos.xhtml" style="color:white">Regresar</a></li>
+					<li style="color:white;">#{sesBean.getUsuario().getNombre()} #{sesBean.getUsuario().getApellido()}</li>
+					<li><h:commandLink value="Log out" actionListener="#{sesBean.logout()}" style="color:white; background:gray; padding:10px;"></h:commandLink></li>
+				</ul>
+			</div>
+ 		</div>
+ 	#{reporteEqean.setIdEquipo(repsEquipBean.getEquipo())}
+	</h:form>
+	#{repsEquipBean.setEquipo(reporteEqean.getIdEquipo())}
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Reportes del Equipo">
+			</p:outputLabel>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Reportes del Equipo con ID: #{repsEquipBean.getEquipo()}"/>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Laboratorio Asociado: "/>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="ID del Laboratorio: #{reporteEqean.getLaboratorio().getId()}"/>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Nombre del Laboratorio: #{reporteEqean.getLaboratorio().getNombre()}"/>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Estado del Equipo: #{reporteEqean.EquipoActivo()}"/>
+	<br></br>
+	<h:form>
+	#{reporteEqean.setIdEquipo(repsEquipBean.getEquipo())}
+	<p:dataTable id="nov" value="#{reporteEqean.getNovedades()}" var="novedad" paginator="true" rows="10"  paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}          {Exporters}">
+		<f:facet name="{Exporters}">
+				<h:commandLink>
+                    <img src="excel.png" style="width:20px; height:20px;"></img>
+                    <p:dataExporter type="xls" target="nov" fileName="novedades equipo #{repsEquipBean.getEquipo()}" />
+                </h:commandLink>
+			</f:facet>
+		<p:column headerText="Id"><p:outputLabel value="${novedad.getId()}"/></p:column>
+		<p:column headerText="Descripcion"><p:outputLabel value="${novedad.getDescripcion()}"/></p:column>
+		<p:column headerText="Justificacion"><p:outputLabel value="${novedad.getJustificacion()}"/></p:column>
+		<p:column headerText="Fecha"><p:outputLabel value="${novedad.getFechaNovedad()}"/></p:column>
+	</p:dataTable>
+	</h:form>
+	<br></br>
+ </h:body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:p="http://primefaces.org/ui"
+xmlns:f="http://java.sun.com/jsf/core">
+ <h:head><title>Reporte de Equipos</title>
+ <body style = "background: url(https://us.123rf.com/450wm/naiauss/naiauss1509/naiauss150900377/45703761-primer-plano-de-patr%C3%B3n-de-la-textura-de-papel-de-color-azul-claro-para-el-fondo.jpg?ver=6) no-repeat ; background-size: 102% 100%;">
+	</body>
+  	<style type="text/css">
+ 		.my_test li{
+ 			display:inline;
+ 			padding:10px;
+ 			margin:10px;
+ 		}
+ 		
+ 		.pers{
+ 			color:white; 
+ 			background:#1B8344;
+ 			padding:5px;
+ 			margin:5px;	
+ 			width:100%;
+ 		}
+ 		
+ 		.pers ul li{
+ 			padding:5px;
+ 			margin:5px;
+ 		}
+ 		
+ 		.temp{
+ 			font-size:20px;
+ 		}
+ 		
+ 		.ui-datatable-data tr td{
+ 			background:white;
+ 		}
+ 		
+ 		.ui-paginator{
+ 			background:white;
+ 		}
+ 		
+ 		.ui-datatable-tablewrapper table thead tr th{
+ 			background:	#1B8344;
+ 			color:white;
+ 		}
+ 		
+ 		.pers{
+			width:100%;
+			background:#1B8344;
+		}
+ 	</style>
+ </h:head>
+ 
+ <h:body style= "margin:0px; padding:0px;">
+ <br></br>
+ 
+ 	<h:form>
+ 		<div style="margin:0px; padding:5px; background:#1B8344; width:100%">
+ 			<div style="text-align:right;">
+				<ul class="my_test">
+					<li><a href="useradmin.xhtml" style="color:white">Regresar</a></li>
+					<li style="color:white;">#{sesBean.getUsuario().getNombre()} #{sesBean.getUsuario().getApellido()}</li>
+					<li><h:commandLink value="Log out" actionListener="#{sesBean.logout()}" style="color:white; background:gray; padding:10px;"></h:commandLink></li>
+				</ul>
+			</div>
+ 		</div>
+	</h:form>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Reporte de Equipos">
+			</p:outputLabel>
+	<h:form>
+	<p:dataTable id="equipos" value="#{reporteEqean.getTotalEquipos()}" var="equip" paginator="true" rows="6" widgetVar="equiposTable" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}          {Exporters}">
+		<f:facet name="{Exporters}">
+				<h:commandLink>
+                    <img src="excel.png" style="width:20px; height:20px;"></img>
+                    <p:dataExporter type="xls" target="equipos" fileName="informacion equipos" />
+                </h:commandLink>
+			</f:facet>
+		<p:column headerText="Codigo" filterBy="#{equip.getId()}" >
+			<p:outputLabel value="${equip.getId()}"/>
+		</p:column>
+		<p:column headerText="Referencia" filterBy="#{equip.getFechaInicioActividad()}">
+			<p:outputLabel value="${equip.getFechaInicioActividad()}"/>
+		</p:column>
+		<p:column headerText="Activo" filterBy="${equip.getFechaFinActividad() eq null}" >
+			<p:outputLabel value="${equip.getFechaFinActividad() eq null}"/>
+		</p:column>
+		<p:column headerText="Nombre laboratorio" filterBy="#{reporteEqean.getLaboratorio(equip.getId()).getNombre()}">
+			<p:outputLabel value="#{reporteEqean.getLaboratorio(equip.getId()).getNombre()}"/>
+		</p:column>
+		<p:column headerText="ID laboratorio" filterBy="#{reporteEqean.getLaboratorio(equip.getId()).getId()}">
+			<p:outputLabel value="#{reporteEqean.getLaboratorio(equip.getId()).getId()}"/>
+		</p:column>
+		 <p:column headerText="Reporte de Equipo">
+			<p:button outcome="reportesEquipo" value="Ver Reporte" >
+				<f:param value="${equip.getId()}" name="equipo" ></f:param>
+			</p:button>
+		</p:column>
+		<p:column headerText="Dar de baja Equipo">
+			<p:button outcome="elementosEquipo" value="Dar de baja">
+				<f:param value="${equip.getId()}" name="equipoBaja"></f:param>
+			</p:button>
+		</p:column>
+		
+	</p:dataTable>
+	</h:form>	
+	
+	<br></br>
+	<br></br>
+	<br></br>
+	
+	<div class="pers">
+		Algunos enlaces de interés:<br></br>
+		<ul>
+			<li><a href="https://www.escuelaing.edu.co/es/" style="color:white;">Escuela Colombiana de Ingeniería Julio Garavito</a></li>
+			<li><a href="http://laboratorio.is.escuelaing.edu.co/" style="color:white">Laboratorio de Informática</a></li>
+		</ul>
+	</div>		
+ </h:body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:p="http://primefaces.org/ui"
+xmlns:f="http://java.sun.com/jsf/core">
+ <h:head><title>Reportes de Laboratorio</title>
+ <body style = "background: url(https://guarrocasas.arjowiggins.com/sites/default/files/styles/default/public/productos/0406731_Cartulina%20L_Verde%20Claro__240_gr.jpg?itok=toudHk3c) no-repeat ; background-size: 102% 200%;">
+	</body>
+  	<style type="text/css">
+ 		.my_test li{
+ 			display:inline;
+ 			padding:10px;
+ 			margin:10px;
+ 		}
+ 		.pers{
+ 			color:white; 
+ 			background:#1B8344;
+ 			padding:5px;
+ 			margin:5px;	
+ 			width:100%;
+ 		}
+ 		.pers ul li{
+ 			padding:5px;
+ 			margin:5px;
+ 		}
+ 		.temp{
+ 			font-size:20px;
+ 		}
+ 		.ui-datatable-data tr td{
+ 			background:white;
+ 		}
+ 		.ui-paginator{
+ 			background:white;
+ 		}
+ 		.ui-datatable-tablewrapper table thead tr th{
+ 			background:	#1B8344;
+ 			color:white;
+ 		}
+ 		.pers{
+			width:100%;
+			background:#1B8344;
+		}
+ 	</style>
+ </h:head>
+ 
+<h:body style= "margin:0px; padding:0px;">
+ <br></br>
+ 	#{reportLabBean.setLaboratorio(repotsLabBean.getLaboratorio())}
+ 	<h:form>
+ 		<div style="margin:0px; padding:5px; background:#1B8344; width:100%">
+ 			<div style="text-align:right;">
+				<ul class="my_test">
+					<li><a href="useradmin.xhtml" style="color:white">Regresar</a></li>
+					<li style="color:white;">#{sesBean.getUsuario().getNombre()} #{sesBean.getUsuario().getApellido()}</li>
+					<li><h:commandLink value="Log out" actionListener="#{sesBean.logout()}" style="color:white; background:gray; padding:10px;"></h:commandLink></li>
+				</ul>
+			</div>
+ 		</div>
+	</h:form>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Reportes del Laboratorio">
+			</p:outputLabel>
+	<h:form>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Código de Laboratorio: #{repotsLabBean.getLaboratorio()} "/>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Nombre de Laboratorio: #{reportLabBean.NombreLaboratorio()}"/>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:200%" value="Estado de Laboratorio: #{reportLabBean.estadoLaboratorio()}"/>
+	<br></br>
+	<p:button style="position:absolute ; top:332px ; left:940px" outcome="reporteLaboratorios" value="Regresar"></p:button>
+	<br></br>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250%" value="Equipos Asociados">
+			</p:outputLabel>
+	<br></br>
+	<p:dataTable id="equipo" value="#{reportLabBean.getLaboratorio(repotsLabBean.getLaboratorio()).getEquipos()}" var="equipo" paginator="true" rows="6" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}          {Exporters}">
+		<f:facet name="{Exporters}">
+				<h:commandLink>
+                    <img src="excel.png" style="width:20px; height:20px;"></img>
+                    <p:dataExporter type="xls" target="equipo" fileName="Equipos laboratorio #{repotsLabBean.getLaboratorio()} - #{reportLabBean.NombreLaboratorio()}" />
+                </h:commandLink>
+			</f:facet>
+		<p:column headerText="Codigo"><p:outputLabel value="${equipo.getId()}"/></p:column>
+		<p:column headerText="Fecha Aquisicion"><p:outputLabel value="${equipo.getFechaAdquisicion()}"/></p:column>
+		<p:column headerText="Fecha Inicion Actividad"><p:outputLabel value="${equipo.getFechaInicioActividad()}"/></p:column>
+	</p:dataTable>
+	<br></br>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250%" value="Actividades del Laboratorio">
+			</p:outputLabel>
+	<p:dataTable id="novedades" value="#{reportLabBean.getNovedadesRelacionadas(repotsLabBean.getLaboratorio())}" var="nov" paginator="true" rows="6" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}          {Exporters}">
+		<f:facet name="{Exporters}">
+				<h:commandLink>
+                    <img src="excel.png" style="width:20px; height:20px;"></img>
+                    <p:dataExporter type="xls" target="novedades" fileName="Actividades laboratorio #{repotsLabBean.getLaboratorio()} - #{reportLabBean.NombreLaboratorio()}" />
+                </h:commandLink>
+			</f:facet>
+		<p:column headerText="Codigo"><p:outputLabel value="${nov.getId()}"/></p:column>
+		<p:column headerText="Descripcion"><p:outputLabel value="${nov.getDescripcion()}"/></p:column>
+		<p:column headerText="Justificacion"><p:outputLabel value="${nov.getJustificacion()}"/></p:column>
+		<p:column headerText="Fecha"><p:outputLabel value="${nov.getFechaNovedad()}"/></p:column>
+		<p:column headerText="Equipo"><p:outputLabel value="${nov.getEquipo()}"/></p:column>		
+	</p:dataTable>
+	</h:form>	
+</h:body>
+</html>

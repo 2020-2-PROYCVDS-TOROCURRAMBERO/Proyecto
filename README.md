@@ -59,7 +59,7 @@ jairo123
 
 ### Descripción General
 
-Algo
+El Registro Laboratorio de Informática es una herramienta cuyo objetivo es proveer al usuario una interfaz amigable en la cual el usuario es capaz de registrar elementos de tecnología a equipos de cómputo, los cuales podrá utilizar para asignarlos a sus laboratorios correspondientes, para así llevar un mejor control del inventario de cada uno de los laboratorios de la facultad de Ingeniería de Sistemas de la Escuela Colombiana de Ingeniería Julio Garavito.
 
 ### Manual de Usuario
 

@@ -129,6 +129,10 @@ Para registrar una novedad, nos dirigimos al menú de la parte superior izquierd
 
 Teniendo en cuenta la situación que se vivió tanto en el país de residencia (Colombia) de los tres integrantes como en el mundo de la pandemia, el trabajo fue realizado completamente de manera virtual. No hubo ninguna reunión presencial, todas las reuniones fueron realizadas de forma 100% virtual utilizando la plataforma de **Microsoft Teams**, en la cual realizábamos las sustentaciones de retroalimentación con el profesor, trabajábamos grupalmente desarrollando los Sprints en el horario de clase, y por fuera del horario de clase cada uno por su cuenta realizó las tareas que les fueron asignadas en el **Taiga**.
 
+## Enlace a Taiga
+
+[![Managed with Taiga.io](https://img.shields.io/badge/managed%20with-TAIGA.io-709f14.svg)](https://tree.taiga.io/project/juanmunozd-historial-de-equipos-labinfo/ "Managed with Taiga.io")
+
 ### Release-Burndown Chart del Proyecto
 
 *------------Colocar imágen en este lugar------------*
@@ -150,10 +154,6 @@ En el segundo Sprint, tuvimos algunas dificultades asignando las tareas que deb�
 En el tercer y último Sprint del proyecto, pudimos cumplir satisfactoriamente con todos los requisitos funcionales del proyecto, tuvimos uno que otro inconveniente de tiempo al no sustentar en los horarios de clase las correcciones funcionales que nos había realizado el profesor, pero luego de la clase inmediatamente fueron corregidas para así poder los siguientes Sprints sustentar bien funcional el proyecto. Luego tuvimos inconvenientes arreglando un problema que persistía desde el Sprint 1 del cual no nos habíamos percatado que todavía existía dicho inconveniente, sin embargo, fue arreglado sin problema para así poder entregar un proyecto enteramente funcional.
 
 *------------Colocar imágen en este lugar------------*
-
-### Enlace a Taiga
-
-[![Managed with Taiga.io](https://img.shields.io/badge/managed%20with-TAIGA.io-709f14.svg)](https://tree.taiga.io/project/juanmunozd-historial-de-equipos-labinfo/ "Managed with Taiga.io")
 
 ## Credenciales para las Bases de Datos
 * Host: ec2-52-44-235-121.compute-1.amazonaws.com

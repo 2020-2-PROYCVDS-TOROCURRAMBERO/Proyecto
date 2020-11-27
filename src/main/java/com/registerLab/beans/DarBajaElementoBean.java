@@ -29,10 +29,10 @@ public class DarBajaElementoBean extends BaseBeanRegisterLab{
 		FacesContext context = FacesContext.getCurrentInstance();
 		try {
 			servicios.darBajaElemento(elm.getId(),servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
-			context.addMessage(null, new FacesMessage("Succesfull","El elemento ha sido dado de baja."));
+			context.addMessage(null, new FacesMessage("¡Listo!","El elemento ha sido dado de baja satisfactoriamente."));
 		}catch(ECILabException e) {
 			System.out.println(e.getMessage());
-			context.addMessage(null, new FacesMessage("error",e.getMessage()));
+			context.addMessage(null, new FacesMessage("Error",e.getMessage()));
 
 			
 		}
@@ -42,7 +42,7 @@ public class DarBajaElementoBean extends BaseBeanRegisterLab{
 	public void darBajaConEquipoAsociado(Elemento elm,Equipo equ) {
 		FacesContext context = FacesContext.getCurrentInstance();
 		servicios.darBajaConEquipoAsociado(elm,equ);
-		context.addMessage(null, new FacesMessage("Succesfull","El elemento ha sido dado de baja."));
+		context.addMessage(null, new FacesMessage("¡Listo!","El elemento ha sido dado de baja satisfactoriamente."));
 		
 	}
 	

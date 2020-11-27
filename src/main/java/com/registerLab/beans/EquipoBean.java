@@ -117,12 +117,12 @@ public class EquipoBean  extends BaseBeanRegisterLab {
 		try{
 			Date d=null; 
 			Date da=null;
-			if(elementos.size()<4) throw new ECILabException("Faltan elementos para registrar este equipo");
+			if(elementos.size()<4) throw new ECILabException("Error: Hacen falta elementos para registrar este equipo.");
 			if(fechaAdquisicion!=null) d= new Date(fechaAdquisicion.getTime());
 			if(fechaInicioActividad!=null) da= new Date(fechaInicioActividad.getTime());
 			servicios.insertarEquipoSinLaboratorio(id, da, null, d, elementos);
 			elementos.clear();
-			context.addMessage(null, new FacesMessage("Correcto","se ha registrado el equipo"));
+			context.addMessage(null, new FacesMessage("¡Listo!","El equipo ha sido registrado satisfactoriamente."));
 		}catch(Exception e){
 			context.addMessage(null, new FacesMessage("Error",e.getMessage()) );			
 		}
@@ -139,12 +139,12 @@ public class EquipoBean  extends BaseBeanRegisterLab {
 				actual=new Date (fechaActual.getTime());
 				int ultimo = servicios.getUltimaNovedad();
 				servicios.asociarElemento(idElemento, id,servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
-				servicios.AgregarNovedad("Se realiza una nueva asociacion al elemento "+String.valueOf(idElemento)+" con su respectivo equipo "+String.valueOf(id),"Nueva asociacion de elemento", id, idElemento,servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
-				context.addMessage(null, new FacesMessage("Succesfull","elemento asociado.") );
+				servicios.AgregarNovedad("Se ha realizado una nueva asociación al elemento "+String.valueOf(idElemento)+" con su respectivo equipo "+String.valueOf(id),"Nueva asociacion de elemento", id, idElemento,servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
+				context.addMessage(null, new FacesMessage("¡Listo!","El elemento ha sido asociado satisfactoriamente.") );
 				
 				
 			} catch (ECILabException e) {
-				context.addMessage(null, new FacesMessage("error","No se pudo asociar el elemento verifique la informacion ingresada" ));
+				context.addMessage(null, new FacesMessage("Error","No se ha podido asociar el elemento, por favor verifique la información ingresada a continuación." ));
 			}		
 	}
 	
@@ -155,12 +155,12 @@ public class EquipoBean  extends BaseBeanRegisterLab {
 		java.util.Date fechaActual = new java.util.Date(); 		
 		actual=new Date (fechaActual.getTime());
 		int ultimo = servicios.getUltimaNovedad();
-		servicios.AgregarNovedad(descripcion, "Cambio de asociacion del elemento a otro equipo", id, idElemento,servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
+		servicios.AgregarNovedad(descripcion, "Cambio de asociación del elemento a otro equipo", id, idElemento,servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
 		servicios.asociarElemento(idElemento, id);
-		context.addMessage(null, new FacesMessage("Succesfull","Asociacion modificada.") );
+		context.addMessage(null, new FacesMessage("¡Listo!","La asociación ha sido modificada satisfactoriamente."));
 		}
 		catch(Exception e) {
-			context.addMessage(null, new FacesMessage("error","No se puede modificar la asociacion verifique la informacion ingresada") );
+			context.addMessage(null, new FacesMessage("Error","No se ha podido modificar la asociación, por favor verifique la informacion ingresada a continuación.") );
 		}
 	}
 	public Equipo getEquipo() {
@@ -185,7 +185,7 @@ public class EquipoBean  extends BaseBeanRegisterLab {
 				}
 				else {
 					FacesContext context = FacesContext.getCurrentInstance();
-					context.addMessage(null, new FacesMessage("Succesfull","No fue posible aÃ±adir el elemento seleccionado") );
+					context.addMessage(null, new FacesMessage("Error","No ha sido posible añadir el elemento que ha sido seleccionado."));
 					return false;
 				}
 			} 

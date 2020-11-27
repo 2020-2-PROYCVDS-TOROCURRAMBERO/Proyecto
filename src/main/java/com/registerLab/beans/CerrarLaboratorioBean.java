@@ -31,7 +31,7 @@ public class CerrarLaboratorioBean extends BaseBeanRegisterLab{
 		FacesContext context = FacesContext.getCurrentInstance(); 
 		try {
 			servicios.cerrarLaboratorio(lab.getId());
-			context.addMessage(null, new FacesMessage("SuccessFull","El laboratorio "+String.valueOf(lab.getId()) +" "+String.valueOf(lab.getNombre()+" a sido cerrado")));
+			context.addMessage(null, new FacesMessage("¡Listo!","El laboratorio "+String.valueOf(lab.getId()) +" "+String.valueOf(lab.getNombre()+" a sido cerrado satisfactoriamente.")));
 		}catch(ECILabException e) {
 			context.addMessage(null, new FacesMessage("Error",e.getMessage()));
 		}

@@ -43,10 +43,10 @@ public class DarBajaEquipoBean extends BaseBeanRegisterLab{
 		FacesContext context = FacesContext.getCurrentInstance();
 		try {
 			servicios.darBajaEquipo(eq.getId(),servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
-			context.addMessage(null, new FacesMessage("Succesfull","El equipo ha sido dado de baja."));
+			context.addMessage(null, new FacesMessage("¡Listo!","El equipo ha sido dado de baja satisfactoriamente."));
 		}catch(ECILabException e) {
 			System.out.println(e.getMessage());
-			context.addMessage(null, new FacesMessage("error",e.getMessage()));
+			context.addMessage(null, new FacesMessage("Error",e.getMessage()));
 
 			
 		}

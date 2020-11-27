@@ -62,7 +62,7 @@ public class SessionBean extends BaseBeanRegisterLab{
 		}
 			catch(Exception e) {
 		        FacesContext context = FacesContext.getCurrentInstance();
-		        context.addMessage(null, new FacesMessage("Error","Revise sus credenciales, no fue posible iniciar sesión") );
+		        context.addMessage(null, new FacesMessage("Errorrrrrrrr","Por favor Revise sus credenciales, no fue posible iniciar sesión") );
 
 			}
 		}

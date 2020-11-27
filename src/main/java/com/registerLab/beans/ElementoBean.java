@@ -66,7 +66,7 @@ public class ElementoBean extends BaseBeanRegisterLab{
 			Date d=null; 
 			if(fechaAdquisicion!=null) d= new Date(fechaAdquisicion.getTime());
 			servicios.AgregarElemento(categoria, fabricante, referencia, d, null, null);
-	        context.addMessage(null, new FacesMessage("Succesfull","elemento insertado.") );
+	        context.addMessage(null, new FacesMessage("¡Listo!","El elemento ha sido insertado satisfactoriamente.") );
 		}catch(ECILabException e) {
 			context.addMessage(null, new FacesMessage("Error",e.getMessage()));
 		}	

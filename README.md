@@ -144,7 +144,11 @@ Para registrar una novedad, nos dirigimos al menú de la parte superior izquierd
 	
 [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto)
 
-## Codacy
+## Enlace a Taiga
+
+[![Managed with Taiga.io](https://img.shields.io/badge/managed%20with-TAIGA.io-709f14.svg)](https://tree.taiga.io/project/juanmunozd-historial-de-equipos-labinfo/ "Managed with Taiga.io")
+
+## Enlace a Codacy
 	
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/345169c7075b441fa4ddc246a6a71c9b)](https://www.codacy.com/gh/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto&amp;utm_campaign=Badge_Grade)
 
@@ -153,10 +157,6 @@ Para registrar una novedad, nos dirigimos al menú de la parte superior izquierd
 ### Metodología
 
 Teniendo en cuenta la situación que se vivió tanto en el país de residencia (Colombia) de los tres integrantes como en el mundo de la pandemia, el trabajo fue realizado completamente de manera virtual. No hubo ninguna reunión presencial, todas las reuniones fueron realizadas de forma 100% virtual utilizando la plataforma de **Microsoft Teams**, en la cual realizábamos las sustentaciones de retroalimentación con el profesor, trabajábamos grupalmente desarrollando los Sprints en el horario de clase, y por fuera del horario de clase cada uno por su cuenta realizó las tareas que les fueron asignadas en el **Taiga**.
-
-## Enlace a Taiga
-
-[![Managed with Taiga.io](https://img.shields.io/badge/managed%20with-TAIGA.io-709f14.svg)](https://tree.taiga.io/project/juanmunozd-historial-de-equipos-labinfo/ "Managed with Taiga.io")
 
 ### Release-Burndown Chart del Proyecto
 

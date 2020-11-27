@@ -9,20 +9,18 @@ import javax.faces.bean.RequestScoped;
 public class EquipoNovedadBean{
 	@ManagedProperty(value="#{param.equipo}")
 	private int equipo;
-	public EquipoNovedadBean() {
-		
+	public EquipoNovedadBean() {	
 	}
 	/*
-	 * @param equipo - la id del nuevo equipo a asociar a la vista
+	 * @param equipo ID del nuevo equipo por asociar.  
 	 */
 	public void setEquipo(int equipo) {
 		this.equipo = equipo;
 	}
 	/*
-	 * @return devuelve la id del equipo asociado a la vista
+	 * @return Retorna el ID del equipo asociado.
 	 */
 	public int getEquipo() {
 		return equipo;
 	}
-
 }

@@ -54,7 +54,7 @@ public class NovedadBean extends BaseBeanRegisterLab{
 		FacesContext context = FacesContext.getCurrentInstance();
 		try {
 			servicios.AgregarNovedad(descripcion, detalle, equipo, elemento, servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
-			context.addMessage(null, new FacesMessage("¡Listo!","Ha sido insertado satisfactoriamente.") );
+			context.addMessage(null, new FacesMessage("Listo!","Ha sido insertado satisfactoriamente.") );
 		} catch (ECILabException e) {
 			context.addMessage(null, new FacesMessage("Error","No ha sido posible realizar la respectiva insercion.") );
 		}

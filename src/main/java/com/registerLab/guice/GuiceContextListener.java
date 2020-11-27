@@ -1,5 +1,4 @@
 package com.registerLab.guice;
-
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -19,15 +18,11 @@ import com.registerLab.myBatisDAO.MyBatisNovedadDAO;
 import com.registerLab.myBatisDAO.MyBatisUsuarioDAO;
 import com.registerLab.servicios.ServiciosECILab;
 import com.registerLab.servicios.ServiciosECILabImpl;
-
-
 public class GuiceContextListener implements ServletContextListener {
-
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
         ServletContext servletContext = servletContextEvent.getServletContext();
         servletContext.removeAttribute(Injector.class.getName());
     }
-
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         Injector injector = Guice.createInjector(new XMLMyBatisModule() {
             @Override
@@ -43,7 +38,6 @@ public class GuiceContextListener implements ServletContextListener {
                 bind(NovedadDAO.class).to(MyBatisNovedadDAO.class);
             }
         });
-
         servletContextEvent.getServletContext().setAttribute(Injector.class.getName(), injector);
     }
 }

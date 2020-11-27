@@ -22,47 +22,46 @@ public class ElementoBeanNovedad extends BaseBeanRegisterLab{
 		servicios = injector.getInstance(ServiciosECILabImpl.class);
 	}
 	/*
-	 * Actualiza la id del elemento
-	 * @Param elemento - la id del elemento
+	 * Actualiza el ID del elemento.
+	 * @Param elemento ID del elemento.
 	 */
 	public void setElemento(int elemento) {
 		this.elemento = elemento;
 	}
 	/*
-	 * @Return devuelve el elemento recopilado por la vista
+	 * @Return Retorna el elemento adquirido por la vista.
 	 */
 	public int getElemento() {
 		return elemento;
 	}
 	/*
-	 * @return devuelve el elemento correspondiente a el atributo elemento
+	 * @return Retorna el elemento correspondiente al atributo elemento.
 	 */
 	public Elemento get() {
 		return servicios.getElemento(elemento);
 	}
 	/*
-	 * @return devuelve todas las novedades asociadas al elemento
+	 * @return Retorna las novedades asociadas al elemento.
 	 */
 	public ArrayList<Novedad> getNovedad(){
 		return servicios.getNovedadesElemento(elemento);
 	}
 	/*
-	 * @return devuelve los elementos que corresponden al equipo y al elemento
+	 * @return Retorna los elementos correspondientes al equipo y al elemento.
 	 */
 	public ArrayList<Novedad> getNovedadElementoEquipo(){
 		return servicios.getNovedades(elemento,equipo);
 	}
 	/*
-	 * @Return id del equipo
+	 * @Return Retorna el ID del equipo
 	 */
 	public int getEquipo() {
 		return equipo;
 	}
 	/*
-	 * @param id - la id del equipo a actualizar
+	 * @param id ID del equipo por actualizar.
 	 */
 	public void setEquipo(int id) {
 		equipo = id;
 	}
-
 }

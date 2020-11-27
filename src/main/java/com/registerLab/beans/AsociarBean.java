@@ -45,7 +45,7 @@ public class AsociarBean extends BaseBeanRegisterLab{
 		try {
 			System.out.println("id                 "+elm.getId()+" "+idEquipo);
 			servicios.asociarElemento(elm.getId(), idEquipo,servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
-			context.addMessage(null, new FacesMessage("Succesfull","se ha asociado correctamente"));
+			context.addMessage(null, new FacesMessage("Listo!","Ha sido asociado satisfactoriamente."));
 		} catch (ECILabException e) {
 	        context.addMessage(null, new FacesMessage("Error",e.getMessage()));
 		}
@@ -55,27 +55,21 @@ public class AsociarBean extends BaseBeanRegisterLab{
 		FacesContext context = FacesContext.getCurrentInstance();
 		try {
 			servicios.asociarEquipo(idEquipo, idLaboratorio,servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
-			context.addMessage(null, new FacesMessage("Succesfull","se ha asociado correctamente"));
+			context.addMessage(null, new FacesMessage("Listo!","Ha sido asociado satisfactoriamente."));
 		} catch (ECILabException e) {
 	        context.addMessage(null, new FacesMessage("Error",e.getMessage()));
 		}
 	}
-	
 	public List<Equipo> getEquipos(){
 		return servicios.getEquipos();
 	}
-	
 	public List<Laboratorio> getLaboratorios(){
 		return servicios.getLaboratorios();
 	}
-	
 	public Equipo getEquipo() {
 		return servicios.getEquipo(equipo);
 	}
-	
 	public void setEquipo(int equipo) {
 		this.equipo = equipo;
 	}
-	
-	
 }

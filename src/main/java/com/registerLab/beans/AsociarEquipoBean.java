@@ -1,5 +1,4 @@
 package com.registerLab.beans;
-
 import java.util.ArrayList;
 
 import javax.faces.application.FacesMessage;
@@ -26,7 +25,6 @@ public class AsociarEquipoBean extends BaseBeanRegisterLab{
 		servicios = injector.getInstance(ServiciosECILabImpl.class);
 	}
 	public Laboratorio getLaboratorio() {
-		//System.out.println(laboratorio);
 		return servicios.getLaboratorio(laboratorio);
 	}
 	public void setLaboratorio(int lab) {
@@ -35,26 +33,21 @@ public class AsociarEquipoBean extends BaseBeanRegisterLab{
 	public ArrayList<Equipo> getEquipos(){
 		return servicios.getEquipos();
 	}
-	
 	public ArrayList<Equipo> getEquiposinLab(){
 		return servicios.getEquiposinLab();
 	}
-	
 	public void asociarEquipo(Equipo e) {
 		FacesContext context = FacesContext.getCurrentInstance();
 		try {
-			//System.out.println(laboratorio);
 			servicios.asociarEquipo(e.getId(), laboratorio);
-			servicios.agregarNovedadSinElemento("El equipo ha sido añadido al laboratorio "+String.valueOf(laboratorio),"Necesidad de equipos en el laboratorio",e.getId(),servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
-			context.addMessage(null, new FacesMessage("¡Listo!","El equipo ha sido asociado satisfactoriamente."));
+			servicios.agregarNovedadSinElemento("El equipo ha sido agregado al laboratorio "+String.valueOf(laboratorio),"Necesidad de equipos en el laboratorio",e.getId(),servicios.getUsuario(SecurityUtils.getSubject().getPrincipal().toString()).getId());
+			context.addMessage(null, new FacesMessage("Listo!","El equipo ha sido asociado satisfactoriamente."));
 
 		} catch (ECILabException e1) {
 	        context.addMessage(null, new FacesMessage("Error",e1.getMessage()) );
-
 		}
 	}
 	public ArrayList<Equipo> getAllEquipos(){
 		return servicios.getAllEquipos();
 	}
-
 }

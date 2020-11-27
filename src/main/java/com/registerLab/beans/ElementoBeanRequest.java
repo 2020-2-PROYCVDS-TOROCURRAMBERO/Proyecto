@@ -15,28 +15,27 @@ public class ElementoBeanRequest {
 		
 	}
 	/*
-	 * @return devuelve la id del elemento asociado a la vista
+	 * @return Retorna el ID del elemento asociado.
 	 */
 	public int getElemento() {
 		return elemento;
 	}
 	/*
-	 * Actualiza la id del elemento asociado a la vista
+	 * Actualiza el ID del elemento asociado.
 	 */
 	public void setElemento(int elemento) {
 		this.elemento = elemento;
 	}
 	/*
-	 * @param equipo - la id del equipo a asociar a la vista
+	 * @param equipo ID del equipo asociado.
 	 */
 	public void setEquipo(int equipo) {
 		this.equipo = equipo;
 	}
 	/*
-	 * @return devuelve la id deequipo asociado a la vista
+	 * @return Retorna el ID del equipo asociado.
 	 */
 	public int getEquipo() {
 		return equipo;
 	}
-	
 }

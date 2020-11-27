@@ -102,7 +102,7 @@ public class LaboratorioBean extends BaseBeanRegisterLab  {
 		try {
 			Date d=null; 
 			d= new Date(fechaApertura.getTime());
-			if(equipos.size() > getCapacidad()) throw new ECILabException("La cantidad de equipos registrados exceden la capacidad del laboratorio en cuestión.");
+			if(equipos.size() > getCapacidad()) throw new ECILabException("La cantidad de equipos registrados exceden la capacidad del laboratorio en cuestion.");
 			if (equipos.size() == 0) throw new ECILabException("Error: El laboratorio debe tener por lo menos un equipo asociado.");
 			servicios.agregarLaboratorio(id, nombre, capacidad, null,d);
 			for(Equipo e:equipos) {
@@ -115,7 +115,7 @@ public class LaboratorioBean extends BaseBeanRegisterLab  {
 			}
 			equipos.clear();
 			limpiar();
-	        context.addMessage(null, new FacesMessage("¡Listo!","El laboratorio ha sido registrado satisfactoriamente.") );
+	        context.addMessage(null, new FacesMessage("Listo!","El laboratorio ha sido registrado satisfactoriamente.") );
 		}catch(ECILabException e) {
 			context.addMessage(null, new FacesMessage("Error",e.getMessage()));
 		}
@@ -156,11 +156,10 @@ public class LaboratorioBean extends BaseBeanRegisterLab  {
 				}
 				else {
 					FacesContext context = FacesContext.getCurrentInstance();
-					context.addMessage(null, new FacesMessage("Error","No ha sido posible añadir el equipo seleccionado a continuación.") );
+					context.addMessage(null, new FacesMessage("Error","No ha sido posible agregar el equipo seleccionado a continuacion.") );
 					return false;
 				}
 			} 
 		};
 	}
-	
 }

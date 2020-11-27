@@ -64,12 +64,5 @@ public class reporteEquipoBean extends BaseBeanRegisterLab {
 	}
 	public Laboratorio getLaboratorio(int equipo) {
 		return servicios.getLaboratorioEquipo(equipo);
-	}
-	
-	
-	
-	
-			
+	}		
 }
-	
-

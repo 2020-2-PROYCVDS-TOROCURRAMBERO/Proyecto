@@ -148,7 +148,7 @@ Para registrar una novedad, nos dirigimos al menú de la parte superior izquierd
 
 ### Diagrama de Clases
 
-![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/DiagramaDeClases.jpeg)
+*------------Colocar imágen en este lugar------------*
 
 ## Enlace a la aplicación en Heroku
 

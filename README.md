@@ -158,10 +158,6 @@ Para registrar una novedad, nos dirigimos al menú de la parte superior izquierd
 
 Teniendo en cuenta la situación que se vivió tanto en el país de residencia (Colombia) de los tres integrantes como en el mundo de la pandemia, el trabajo fue realizado completamente de manera virtual. No hubo ninguna reunión presencial, todas las reuniones fueron realizadas de forma 100% virtual utilizando la plataforma de **Microsoft Teams**, en la cual realizábamos las sustentaciones de retroalimentación con el profesor, trabajábamos grupalmente desarrollando los Sprints en el horario de clase, y por fuera del horario de clase cada uno por su cuenta realizó las tareas que les fueron asignadas en el **Taiga**.
 
-### Release-Burndown Chart del Proyecto
-
-*------------Colocar imágen en este lugar------------*
-
 ## Sprint 1
 
 Al principio como no sabíamos muy bien cómo usar Taiga, asignamos muy mal el puntaje por cada tarea del Sprint, dejándole así más trabajo a unos integrantes que a otros, luego de evaluar este incidente, le preguntamos al profesor cuántos puntos asignar por Sprint, para así ya distribuir bien el trabajo entre todos los miembros del equipo, para así empezar a realizar el proyecto y poder entregar el respectivo Sprint completo y con las retroalimentaciones que nos daba el profesor, las cuales las fuimos corrigiendo en el siguiente Sprint para así cerrar los Sprints que íbamos finalizando.

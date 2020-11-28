@@ -24,6 +24,8 @@ Julián Mauricio Velasco Briceño
 
 Julián Mauricio Velasco Briceño (Dueño del Producto)
 
+Oscar David Ospina Rodriguez (Dueño del Producto)
+
 Juan Sebastián Muñoz Cardona (Usuario)
 
 Alejandro Toro Daza (Usuario)
@@ -41,6 +43,18 @@ julian.velasco-b@escuelaing.edu.co
 **Contraseña:**
 
 julian123
+
+-----------------------------------------------------------------------------------
+
+### Oscar David Ospina Rodriguez
+
+**Correo Electrónico:**
+
+oscar.ospina-r@escuelaing.edu.co
+
+**Contraseña:**
+
+oscardavid123
 
 -----------------------------------------------------------------------------------
 

@@ -60,6 +60,15 @@ xmlns:f="http://java.sun.com/jsf/core">
 	<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Reporte de Elementos">
 			</p:outputLabel>
 	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:40px" value="ID del Elemento"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:405px" value="Categoría"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:750px" value="Marca"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:1035px" value="Referencia"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:177% ; position:absolute ; top:179px ; left:1280px" value="Activo (true) / Inactivo (false)"></p:outputLabel>
 	<h:form>
 	<p:dataTable value="#{regElmBean.getTotalElementos()}" var="elemt" paginator="true" rows="6" rowKey="#{elm.getId()}">
 		<p:column headerText="Codigo" sortBy="#{elemt.getId()}" filterBy="${elemt.getId()}" >

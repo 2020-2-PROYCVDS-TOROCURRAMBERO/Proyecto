@@ -69,6 +69,15 @@
 	</h:form>
 	<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Elementos Registrados">
 	</p:outputLabel>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:70px" value="ID del Elemento"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:670px" value="Marca"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:1110px" value="Referencia"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:1455px" value="Activo (true) / Inactivo (false)"></p:outputLabel>
 	<h:form>
 		<p:dataTable value="#{sesBean.getHistorialElementos()}" var="elem" paginator="true" rows="10">
 			<p:column headerText="Codigo">

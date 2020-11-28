@@ -52,8 +52,6 @@
 		}
 
 		.ui-button span {
-			background: #1B8344;
-			color: white;
 		}
 
 		.pers {
@@ -108,6 +106,13 @@
 	#{asBeanN.setEquipo(asoBean.getIdEquipo())}
 	#{asoBean.setEquipo(asoBean.getIdEquipo())}
 	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:335px ; left:120px" value="ID del Elemento"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:335px ; left:670px" value="Marca"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:335px ; left:1100px" value="Referencia"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:335px ; left:1590px" value="Categoría"></p:outputLabel>
 	<h:form id="m_form">
 		#{asoBean.setEquipo(asBeanN.getEquipo())}
 		<p:dataTable value="#{asoBean.getEquipo().getElementos()}" var="elm">
@@ -117,8 +122,14 @@
 			<p:column headerText="Categoria">${elm.getCategoria()}</p:column>
 		</p:dataTable>
 		<br></br>
-		<b style="color:black ; font:Arial ; font-size:280%">Seleccione los elementos a asociar:</b>
+		<b style="color:black ; font:Arial ; font-size:300%">Elementos a Asociar</b>
 		<br></br>
+		<br></br>
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:681px ; left:70px" value="ID del Elemento"></p:outputLabel>
+	    <p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:681px ; left:526px" value="Marca"></p:outputLabel>
+	    <p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:681px ; left:868px" value="Referencia"></p:outputLabel>
+	    <p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:681px ; left:1247px" value="Categoría"></p:outputLabel>
 		<p:growl id="growl" showDetail="true" sticky="true" />
 		<br></br>
 		<p:dataTable value="#{elmBean.getElementosActivos()}" var="elem" rows="10" paginator="true">
@@ -137,12 +148,12 @@
 			<p:column headerText="Asociar elemento">
 				<p:commandLink value="Asociar" actionListener="#{asBeanN.asociarElemento(elem.getId())}"
 					style="background:white;" update="@form">
-					<p:confirm header="Confirmation" message="Estas seguro?" icon="pi pi-exclamation-triangle" />
+					<p:confirm header="Advertencia" message="¿Está seguro que desea asociar este Elemento al Equipo?" icon="pi pi-exclamation-triangle" />
 				</p:commandLink>
 			</p:column>
 		</p:dataTable>
 		<p:confirmDialog global="true" showEffect="fade" hideEffect="fade">
-			<p:commandButton value="Yes" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check" />
+			<p:commandButton value="Sí" type="button" styleClass="ui-confirmdialog-yes" icon="pi pi-check" />
 			<p:commandButton value="No" type="button" styleClass="ui-confirmdialog-no" icon="pi pi-times" />
 		</p:confirmDialog>
 	</h:form>

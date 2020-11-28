@@ -69,6 +69,13 @@ xmlns:p="http://primefaces.org/ui">
 	</h:form>
 	<h:form id="m_form">
 		<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Cerrar Laboratorio"></p:outputLabel>
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:100px" value="ID del Laboratorio"></p:outputLabel>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:625px" value="Laboratorio"></p:outputLabel>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:975px" value="Activo (true) / Inactivo (false)"></p:outputLabel>
 		<p:growl id="message" showDetail="true" sticky="true"/>
 		<p:dataTable value="#{cerrarLabBean.getLaboratorios()}" var="laboratorio" paginator="true" rows="10">
 			<p:column headerText="Id Laboratorio" filterBy="${laboratorio.getId()}">${laboratorio.getId()}</p:column>

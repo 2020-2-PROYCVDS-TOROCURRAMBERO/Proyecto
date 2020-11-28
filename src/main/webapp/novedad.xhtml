@@ -102,6 +102,13 @@ xmlns:p="http://primefaces.org/ui">
 				<p:commandLink value="Registrar Novedad" actionListener="#{novBean.registrarNovedad()}" update="@form" style="background:green; color:white; padding:10px; position:absolute ; top:585px ; left:250px"></p:commandLink>
 			</div>
 			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+			<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:670px ; left:145px" value="Número de la Novedad"></p:outputLabel>
+		    <p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:670px ; left:895px" value="Detalle"></p:outputLabel>
+			<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:670px ; left:1450px" value="Descripción"></p:outputLabel>
 			<div>
 				<p:dataTable value="#{novBean.getNovedades()}" var="nov" paginator="true" rows="10">
 					<p:column headerText="Id">${nov.getId()}</p:column>

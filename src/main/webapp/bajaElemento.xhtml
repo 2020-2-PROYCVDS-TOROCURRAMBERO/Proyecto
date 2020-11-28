@@ -68,6 +68,14 @@ xmlns:p="http://primefaces.org/ui">
 		<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Dar de Baja un Elemento">
 		</p:outputLabel>
 		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:40px" value="ID del Elemento"></p:outputLabel>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:435px" value="Marca"></p:outputLabel>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:715px" value="Referencia"></p:outputLabel>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:1040px" value="Categoría"></p:outputLabel>
+		<p:outputLabel style="color:black ; font:Arial ; font-size:177% ; position:absolute ; top:179px ; left:1280px" value="Activo (true) / Inactivo (false)"></p:outputLabel>
 		<p:dataTable value="#{elmBean.getElementosActivos()}" var="elm" rows="10" paginator="true">
 			<p:column headerText="Id Elemento" filterBy="${elm.getId()}">${elm.getId()}</p:column>
 			<p:column headerText="Fabricante">${elm.getFabricante()}</p:column>

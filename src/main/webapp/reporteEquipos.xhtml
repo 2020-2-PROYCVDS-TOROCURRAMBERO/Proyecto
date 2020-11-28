@@ -66,6 +66,16 @@ xmlns:f="http://java.sun.com/jsf/core">
 	</h:form>
 	<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Reporte de Equipos">
 			</p:outputLabel>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:37px" value="ID del Equipo"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:150% ; position:absolute ; top:183px ; left:278px" value="Fecha de Inicio de Actividad"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:150% ; position:absolute ; top:183px ; left:552px" value="Activo (true) / Inactivo (false)"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:865px" value="Laboratorio"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:1094px" value="ID del Laboratorio"></p:outputLabel>
 	<h:form>
 	<p:dataTable id="equipos" value="#{reporteEqean.getTotalEquipos()}" var="equip" paginator="true" rows="6" widgetVar="equiposTable" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}          {Exporters}">
 		<f:facet name="{Exporters}">

@@ -61,8 +61,15 @@ xmlns:f="http://java.sun.com/jsf/core">
 			</p:outputLabel>
 	<br></br>
 	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:190% ; position:absolute ; top:177px ; left:1px" value="Número del Laboratorio"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:325px" value="Laboratorio"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:190% ; position:absolute ; top:177px ; left:582px" value="ID del Laboratorio"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:145% ; position:absolute ; top:184px ; left:830px" value="Activo (true) / Inactivo (false)"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:145% ; position:absolute ; top:184px ; left:1105px" value="Fecha de Inicio de Actividad"></p:outputLabel>
 	<p:panel id="lab">
-	<p:outputLabel style="color:black ; font:Arial ; font-size:250%" value="Laboratorios"></p:outputLabel>
 	<h:form>
 	<p:dataTable id="novedades" value="#{reportLabBean.getTotalLaboratorios()}" var="lab" paginator="true" rows="6" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink}{Exporters}" rowKey="#{lab.getId()}">
 		<f:facet name="{Exporters}">

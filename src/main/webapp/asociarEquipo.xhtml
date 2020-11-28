@@ -62,10 +62,14 @@ xmlns:p="http://primefaces.org/ui">
 			</div>
  		</div>
 	</h:form>
-	<br></br>
 	<p:outputLabel style="color:black ; font:Arial ; font-size:380%" value="Asociar Equipo">
 	</p:outputLabel>
 	<br></br>
+	<br></br>
+	<br></br>
+	<br></br>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:200px" value="ID del Laboratorio"></p:outputLabel>
+	<p:outputLabel style="color:black ; font:Arial ; font-size:250% ; position:absolute ; top:168px ; left:870px" value="Laboratorio"></p:outputLabel>
 	<h:form id="m_form">
 		<p:dataTable value="#{asoBean.getLaboratorios()}" var="lab" rows="20" paginator="true">
 			<p:column headerText="Id laboratorio" filterBy="${lab.getId()}">${lab.getId()}</p:column>

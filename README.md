@@ -24,7 +24,7 @@ Julián Mauricio Velasco Briceño
 
 Julián Mauricio Velasco Briceño (Dueño del Producto)
 
-Oscar David Ospina Rodriguez (Dueño del Producto)
+Oscar David Ospina Rodríguez (Dueño del Producto)
 
 Juan Sebastián Muñoz Cardona (Usuario)
 
@@ -46,7 +46,7 @@ julian123
 
 -----------------------------------------------------------------------------------
 
-### Oscar David Ospina Rodriguez
+### Oscar David Ospina Rodríguez
 
 **Correo Electrónico:**
 

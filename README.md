@@ -188,7 +188,7 @@ En el segundo Sprint, tuvimos algunas dificultades asignando las tareas que deb�
 
 En el tercer y último Sprint del proyecto, pudimos cumplir satisfactoriamente con todos los requisitos funcionales del proyecto, tuvimos uno que otro inconveniente de tiempo al no sustentar en los horarios de clase las correcciones funcionales que nos había realizado el profesor, pero luego de la clase inmediatamente fueron corregidas para así poder los siguientes Sprints sustentar bien funcional el proyecto. Luego tuvimos inconvenientes arreglando un problema que persistía desde el Sprint 1 del cual no nos habíamos percatado que todavía existía dicho inconveniente, sin embargo, fue arreglado sin problema para así poder entregar un proyecto enteramente funcional.
 
-*------------Colocar imágen en este lugar------------*
+![img](https://github.com/2020-2-PROYCVDS-TOROCURRAMBERO/Proyecto/blob/main/img/Sprint3.PNG)
 
 ## Credenciales para las Bases de Datos
 

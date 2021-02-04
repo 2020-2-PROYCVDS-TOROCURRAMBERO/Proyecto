@@ -192,16 +192,16 @@ En el tercer y último Sprint del proyecto, pudimos cumplir satisfactoriamente c
 
 ## Credenciales para las Bases de Datos
 
-Host: ec2-52-44-235-121.compute-1.amazonaws.com
+* **Host:** ec2-52-44-235-121.compute-1.amazonaws.com
 
-Database: deckjsi71c2o3h
+* **Database:** deckjsi71c2o3h
 
-User: lrffvglxpncscr
+* **User:** lrffvglxpncscr
 
-Port: 5432
+* **Port:** 5432
 
-Password: 1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef
+* **Password:** 1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef
 
-URI: postgres://lrffvglxpncscr:1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef@ec2-52-44-235-121.compute-1.amazonaws.com:5432/deckjsi71c2o3h
+* **URI:** postgres://lrffvglxpncscr:1a4fbf67ecf6af7cda411a4ebe4adbc625bbfbe8e8089df45f518c7a17e43bef@ec2-52-44-235-121.compute-1.amazonaws.com:5432/deckjsi71c2o3h
 
-Heroku CLI: heroku pg:psql postgresql-pointy-79270 --app cvdsproyecto
+* **Heroku CLI:** heroku pg:psql postgresql-pointy-79270 --app cvdsproyecto

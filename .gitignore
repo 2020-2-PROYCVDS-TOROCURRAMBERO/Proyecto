@@ -47,6 +47,7 @@ out/
 ##############################
 ## Eclipse
 ##############################
+target/
 .settings/
 bin/
 tmp/
@@ -82,4 +83,3 @@ nb-configuration.xml
 ## OS X
 ##############################
 .DS_Store
-/nbproject/
